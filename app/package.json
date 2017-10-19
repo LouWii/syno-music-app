@@ -1,0 +1,16 @@
+{
+  "name": "syno-down-app",
+  "productName": "electron-react-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./main.js",
+  "author": {
+    "name": "LouWii",
+    "email": "me@louwii.fr",
+    "url": "https://github.com/louwii"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

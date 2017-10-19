@@ -1,0 +1,12 @@
+.task-add {
+  
+}
+
+.dark-theme .task-add {
+  color: #e8e8e8;
+}
+
+.dark-theme .task-add hr {
+  border-color: #4C566A;
+  background: #4C566A;
+}

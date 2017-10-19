@@ -1,0 +1,50 @@
+.app-bar {
+  /*background: #247093;*/
+  background: #3B4252;
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 5px 0 10px 10px;
+  vertical-align: top;
+  user-select: none;
+  cursor: default;
+}
+
+.app-bar-back {
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  transition: width .2s ease-in-out;
+}
+
+.app-bar-back.display {
+  opacity: 1;
+  width: 32px;
+}
+
+.app-bar-back button {
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+}
+
+.app-bar .app-name {
+  display: inline-block;
+  margin: 0 10px 0 5px;
+  font-weight: 200;
+  font-size: 26px;
+  color: #aab6d2;
+  transition: color .25s;
+}
+
+.app-bar .app-name:hover {
+  color: #fff;
+}
+
+.app-bar .profile-name {
+  display: inline-block;
+  font-size: 24px;
+}
+
+.dark-theme .app-bar {
+  background: #2E3440;
+}

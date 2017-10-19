@@ -1,0 +1,34 @@
+.tasks-list-actions {
+  margin-bottom: 15px;
+}
+
+.tasks-items.card-style {
+  width: 100%;
+  column-count: 1;
+  column-gap: 15px;
+  column-width: 100%;
+}
+
+/*.tasks-items.card-style::before {
+  display: table;
+  content: " ";
+}
+
+.tasks-items.card-style::after {
+  clear: both;
+  display: table;
+  content: " ";
+}*/
+
+.tasks-items.table-style {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+@media screen and (max-width: 990px) {
+  .tasks-items.card-style {
+    column-count: 1;
+    column-width: 100%;
+  }
+}
