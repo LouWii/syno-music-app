@@ -32,7 +32,8 @@ class SongsList extends React.Component {
       <table className="songs-list">
         <tbody>
         {this.props.songs.map(function(element, idx){
-          return <tr key={idx}>
+          const isCurrentSong = (element.id === this.props.player.currentSongId)
+          return <tr key={idx} className={isCurrentSong?'current-song':''}>
             <td className="play-cell">
               <button className="bttn bttn-default btn-sm" type="button" onClick={this.handlePlayClick} data-song-idx={idx}><i className="glyphicon glyphicon-play"></i></button>
             </td>

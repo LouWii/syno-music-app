@@ -105,6 +105,7 @@ class ASClient extends React.Component {
           <SongsList
             songs={this.props.client.albums[this.state.selectedArtistName][this.state.selectedAlbumIdx].songs}
             handlePlaySong={this.handlePlaySong}
+            player={this.props.player}
           />
         }
       </div>
