@@ -10,3 +10,16 @@
 .asclient .form-group label {
     min-width: 100px;
 }
+
+.asclient .albums-selector {
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}

@@ -70,7 +70,7 @@ class ASClient extends React.Component {
             </select>
           </div>
         </div>
-        <div className="form-inline">
+        <div className="form-inline albums-selector">
           {artistHasAlbums
             &&
             <div className="form-group">
