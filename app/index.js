@@ -7,9 +7,7 @@ import configureStore, { saveState } from './store/configureStore';
 import App from './components/App';
 import ProfilesList from './components/ProfilesList'
 import ProfileAdd from './components/ProfileAdd'
-import Client from './components/Client'
 import ASClient from './components/ASClient'
-import TaskAdd from './components/TaskAdd'
 
 import './styles/app.global.css';
 
