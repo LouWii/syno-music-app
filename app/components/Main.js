@@ -21,8 +21,7 @@ class Main extends Component {
           <Player
           playerPlayPause={this.props.playerPlayPause}
           player={this.props.player}
-          profiles={this.props.profiles}
-          client={this.props.client}
+          profile={this.props.profiles[this.props.client.selectedProfileIndex]}
           />
         }
       </div>
