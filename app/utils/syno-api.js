@@ -123,7 +123,7 @@ export let as = {
     */
   },
 
-  streamSong: function(profile) {
+  getStreamSongUrl: function(profile, musicId) {
     // This returns audio data, probably ready to play in an audio player
     // /webapi/AudioStation/stream.cgi/0.mp3?sid=Mr.G2hwEUfP9UC5KON10423&api=SYNO.AudioStation.Stream&version=2&method=stream&id=music_1281&_dc=1508395716692&SynoToken=Gr1SpdgQ..wOE
     /* params:
@@ -135,6 +135,13 @@ export let as = {
       SynoToken	Gr1SpdgQ..wOE
       version	2
     */
+    let url = generateRootQuery(profile)
+    url += '/AudioStation/stream.cgi/0.mp3?api=SYNO.AudioStation.Stream'
+    + '&version=2'
+    + '&method=stream'
+    + '&id='+musicId
+
+    return url
   },
 
   streamSongBis: function(profile) {
