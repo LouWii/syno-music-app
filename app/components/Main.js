@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LoadingOverlay from './LoadingOverlay'
 import AppBar from './AppBar'
 import Popup from './Popup'
+import Player from './Player'
 import '../styles/Main.global.css';
 
 class Main extends Component {
@@ -16,6 +17,12 @@ class Main extends Component {
         <div className="main-container container">
           {React.cloneElement(this.props.children, this.props)}
         </div>
+        {this.props.player.songs.length > 0 &&
+          <Player
+          player={this.props.player}
+          profile={this.props.profiles[this.props.client.selectedProfileId]}
+          />
+        }
       </div>
     )
   }
