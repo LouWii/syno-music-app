@@ -34,6 +34,7 @@ class ASClient extends React.Component {
     if (event.target.value && event.target.value !== '') {
       const albumIdx = parseInt(event.target.value, 10)
       const album = this.props.client.albums[this.state.selectedArtistName][albumIdx]
+      this.props.uiShowLoadingOverlay()
       this.props.clientListAlbumSongs(this.state.profile, this.state.selectedArtistName, album.name, album.album_artist)
 
       this.setState({selectedAlbum: album, selectedAlbumIdx: albumIdx})
