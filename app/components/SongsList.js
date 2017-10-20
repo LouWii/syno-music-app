@@ -2,6 +2,11 @@ import React from 'react';
 import '../styles/SongsList.global.css'
 
 class SongsList extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.handlePlayClick = this.handlePlayClick.bind(this)
+  }
 
   humanDuration(duration) {
     var sec_num = parseInt(duration, 10); // don't forget the second param
@@ -15,6 +20,11 @@ class SongsList extends React.Component {
     return (hours!=='00'?hours+':':'')+minutes+':'+seconds;
   }
 
+  handlePlayClick(event) {
+    const songIdx = event.currentTarget.dataset.songIdx
+    this.props.handlePlaySong(songIdx)
+  }
+
   render() {
     return (
     <div>
@@ -23,7 +33,9 @@ class SongsList extends React.Component {
         <tbody>
         {this.props.songs.map(function(element, idx){
           return <tr key={idx}>
-            <td className="play-cell"><button className="bttn bttn-default btn-sm" type="button"><i className="glyphicon glyphicon-play"></i></button></td>
+            <td className="play-cell">
+              <button className="bttn bttn-default btn-sm" type="button" onClick={this.handlePlayClick} data-song-idx={idx}><i className="glyphicon glyphicon-play"></i></button>
+            </td>
             <td>{element.title}</td>
             <td className="duration-cell">{this.humanDuration(element.additional.song_audio.duration)}</td>
             </tr>
