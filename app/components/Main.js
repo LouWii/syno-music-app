@@ -20,6 +20,8 @@ class Main extends Component {
         {this.props.player.songs.length > 0 &&
           <Player
           playerPlayPause={this.props.playerPlayPause}
+          playerPrevious={this.props.playerPrevious}
+          playerNext={this.props.playerNext}
           player={this.props.player}
           profile={this.props.profiles[this.props.client.selectedProfileIndex]}
           />
