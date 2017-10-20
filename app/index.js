@@ -25,7 +25,6 @@ render(
         <IndexRoute component={ProfilesList}></IndexRoute>
         <Route path="/profiles/add" component={ProfileAdd}></Route>
         <Route path="/profiles/:idx" component={ASClient}></Route>
-        <Route path="/profiles/:idx/addTask" component={TaskAdd}></Route>
       </Route>
     </Router>
   </Provider>,
