@@ -8,11 +8,9 @@ class Player extends React.Component {
 
     this.handlePlayPauseClick = this.handlePlayPauseClick.bind(this)
 
-    const songs = null
-    const playSongIdx = null
     const songUrl = ''
     const playing = false
-    this.state = {songs, playSongIdx, songUrl, playing}
+    this.state = {songUrl, playing}
   }
 
   componentDidMount() {
@@ -45,12 +43,13 @@ class Player extends React.Component {
   render() {
     return (
       <div className="player">
-        <button onClick={this.handlePlayPauseClick} type="button">Play</button>
-        { (this.props.songIdx || this.props.songIdx === 0) &&
+        <span onClick={this.handlePlayPauseClick} type="button">Play</span>
+        <p>{this.props.player.songs.length} loaded ({this.props.player.currentPlaylistId}) - Song {this.props.player.currentSongIdx} - Status {this.props.player.status}</p>
+        { (this.props.player.currentSongIdx || this.props.player.currentSongIdx === 0) &&
         <audio id="audio" src={this.state.songUrl} ></audio>
         }
-        { (this.props.songIdx || this.props.songIdx === 0) &&
-        <p><small>{this.props.songs[this.props.songIdx].title}</small></p>
+        { (this.props.player.currentSongIdx || this.props.player.currentSongIdx === 0) &&
+        <p><small>{this.props.player.songs[this.props.player.currentSongIdx].title}</small></p>
         }
       </div>
     )
