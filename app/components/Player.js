@@ -41,9 +41,10 @@ class Player extends React.Component {
   }
 
   render() {
+    const playPauseActionText = (this.props.player.status==='play'?'Pause':'Play')
     return (
       <div className="player">
-        <span onClick={this.handlePlayPauseClick} type="button">Play</span>
+        <button onClick={this.handlePlayPauseClick} type="button">{playPauseActionText}</button>
         <p>{this.props.player.songs.length} loaded ({this.props.player.currentPlaylistId}) - Song {this.props.player.currentSongIdx} - Status {this.props.player.status}</p>
         { (this.props.player.currentSongIdx || this.props.player.currentSongIdx === 0) &&
         <audio id="audio" src={this.state.songUrl} ></audio>
