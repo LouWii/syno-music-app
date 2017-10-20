@@ -198,6 +198,18 @@ export function playerPlayPause() {
   }
 }
 
+export function playerPrevious() {
+  return {
+    type: 'PLAYER_PREVIOUS'
+  }
+}
+
+export function playerNext() {
+  return {
+    type: 'PLAYER_NEXT'
+  }
+}
+
 export function setPlayerSongs(songs, currentPlaylistId='') {
   return {
     type: 'UPDATE_PLAYER_SONGS',
