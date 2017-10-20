@@ -8,7 +8,8 @@ function mapStateToProps(state) {
     profiles: state.profiles,
     client: state.client,
     ui: state.ui,
-    popup: state.popup
+    popup: state.popup,
+    player: state.player
   }
 }
 
