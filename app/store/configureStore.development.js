@@ -38,14 +38,8 @@ const defaultState = {
     clientIsLoading: false,
     selectedProfileIndex: -1,
     autoRefresh: false,
-    tasksLoaded: false,
-    tasks: [],
     artists: [],
     albums: {},
-    filters: {
-      statusFilter: "all",
-      searchKeywords: ''
-    }
   },
   player: {
     songs: [],
