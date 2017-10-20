@@ -191,3 +191,24 @@ export function popupHide() {
     type: 'POPUP_HIDE'
   }
 }
+
+export function playerPlayPause() {
+  return {
+    type: 'PLAY_PAUSE_PLAYER'
+  }
+}
+
+export function setPlayerSongs(songs, currentPlaylistId='') {
+  return {
+    type: 'UPDATE_PLAYER_SONGS',
+    songs,
+    currentPlaylistId
+  }
+}
+
+export function setPlayerCurrentSong(songIdx) {
+  return {
+    type: 'PLAYER_SET_SONG',
+    songIdx
+  }
+}
