@@ -20,7 +20,7 @@ class Player extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.props.player.currentSongIdx && this.props.player.songs[this.props.player.currentSongIdx]) {
+    if ( (this.props.player.currentSongIdx || this.props.player.currentSongIdx === 0) && this.props.player.songs[this.props.player.currentSongIdx]) {
       const songUrl = as.getStreamSongUrl(this.props.profile, this.props.player.songs[this.props.player.currentSongIdx].id)
       // const songUrl = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/wwy.mp3'
       if (this.state.songUrl != songUrl) {
