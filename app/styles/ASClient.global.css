@@ -1,0 +1,12 @@
+.asclient {
+    padding: 15px 0 0 0;
+    color: #eeeeee;
+}
+
+.asclient .form-inline {
+    margin-bottom: 10px;
+}
+
+.asclient .form-group label {
+    min-width: 100px;
+}

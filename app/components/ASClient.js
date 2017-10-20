@@ -1,6 +1,6 @@
 import React from 'react';
-import TasksList from './TasksList'
-import '../styles/Client.global.css'
+import SongsList from './SongsList'
+import '../styles/ASClient.global.css'
 
 class ASClient extends React.Component {
   constructor(props) {
@@ -14,7 +14,8 @@ class ASClient extends React.Component {
     const selectedArtist = null
     const selectedArtistName = null
     const selectedAlbum = null
-    this.state = { profile, idx, selectedArtist, selectedArtistName, selectedAlbum }
+    const selectedAlbumIdx = null
+    this.state = { profile, idx, selectedArtist, selectedArtistName, selectedAlbum, selectedAlbumIdx }
   }
 
   handleArtistSelect(event) {
@@ -35,7 +36,7 @@ class ASClient extends React.Component {
       const album = this.props.client.albums[this.state.selectedArtistName][albumIdx]
       this.props.clientListAlbumSongs(this.state.profile, this.state.selectedArtistName, album.name, album.album_artist)
 
-      this.setState({selectedAlbum: album})
+      this.setState({selectedAlbum: album, selectedAlbumIdx: albumIdx})
     }
   }
 
@@ -45,8 +46,19 @@ class ASClient extends React.Component {
   }
 
   render() {
+    const artistHasAlbums = (this.state.selectedArtist
+      && this.props.client.artists
+      && this.props.client.artists[this.state.selectedArtist]
+      && this.props.client.albums[this.state.selectedArtistName]
+      && this.props.client.albums[this.state.selectedArtistName].length)
+    const albumHasSongs = (artistHasAlbums
+      && (typeof this.state.selectedAlbumIdx === 'number' && (this.state.selectedAlbumIdx%1) === 0)
+      && this.props.client.albums[this.state.selectedArtistName][this.state.selectedAlbumIdx]
+      && this.props.client.albums[this.state.selectedArtistName][this.state.selectedAlbumIdx].songs
+      && this.props.client.albums[this.state.selectedArtistName][this.state.selectedAlbumIdx].songs.length
+    )
     return (
-      <div className="client" ref="client">
+      <div className="asclient" ref="client">
         <div className="form-inline">
           <div className="form-group">
             <label htmlFor="artists-list">Artists</label>
@@ -59,11 +71,7 @@ class ASClient extends React.Component {
           </div>
         </div>
         <div className="form-inline">
-          {this.state.selectedArtist
-            && this.props.client.artists
-            && this.props.client.artists[this.state.selectedArtist]
-            && this.props.client.albums[this.state.selectedArtistName]
-            && this.props.client.albums[this.state.selectedArtistName].length
+          {artistHasAlbums
             &&
             <div className="form-group">
               <label htmlFor="albums-list">Albums</label>
@@ -77,6 +85,9 @@ class ASClient extends React.Component {
             </div>
           }
         </div>
+        {albumHasSongs &&
+          <SongsList songs={this.props.client.albums[this.state.selectedArtistName][this.state.selectedAlbumIdx].songs} />
+        }
       </div>
     )
   }
