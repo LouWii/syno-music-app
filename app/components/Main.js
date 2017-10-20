@@ -19,8 +19,10 @@ class Main extends Component {
         </div>
         {this.props.player.songs.length > 0 &&
           <Player
+          playerPlayPause={this.props.playerPlayPause}
           player={this.props.player}
-          profile={this.props.profiles[this.props.client.selectedProfileId]}
+          profiles={this.props.profiles}
+          client={this.props.client}
           />
         }
       </div>
