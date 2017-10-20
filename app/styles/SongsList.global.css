@@ -1,0 +1,21 @@
+.songs-list {
+    width: 100%;
+}
+
+.songs-list .play-cell {
+    width: 45px;
+}
+
+.songs-list .duration-cell {
+    width: 70px;
+    text-align: right;
+    padding: 0 10px;
+}
+
+.songs-list tr:hover {
+    background-color: rgba(255, 255, 255, .08);
+}
+
+.songs-list td {
+    padding: 3px 0;
+}
