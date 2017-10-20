@@ -209,6 +209,6 @@ export function setPlayerSongs(songs, currentPlaylistId='') {
 export function setPlayerCurrentSong(songIdx) {
   return {
     type: 'PLAYER_SET_SONG',
-    songIdx
+    songIdx: parseInt(songIdx, 10)
   }
 }
