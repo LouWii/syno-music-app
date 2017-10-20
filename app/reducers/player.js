@@ -10,19 +10,22 @@ function player(state = [], action) {
       return Object.assign({}, state, {songs: action.songs, currentPlaylistId: action.currentPlaylistId})
     case 'PLAYER_NEXT':
       if (state.currentSongIdx < (state.songs.length-1)) {
-        return state
+        const currentSongId = state.songs[state.currentSongIdx+1].id
+        return Object.assign({}, state, {currentSongIdx: state.currentSongIdx+1, currentSongId})
       } else {
-        return Object.assign({}, state, {currentSongIdx: state.currentSongIdx+1})
+        return state
       }
     case 'PLAYER_PREVIOUS':
       if (state.currentSongIdx > 0) {
-        return state
+        const currentSongId = state.songs[state.currentSongIdx-1].id
+        return Object.assign({}, state, {currentSongIdx: state.currentSongIdx-1, currentSongId})
       } else {
-        return Object.assign({}, state, {currentSongIdx: state.currentSongIdx-1})
+        return state
       }
     case 'PLAYER_SET_SONG':
       if (action.songIdx >= 0 && action.songIdx <= (state.songs.length-1)) {
-        return Object.assign({}, state, {currentSongIdx: action.songIdx})
+        const currentSongId = state.songs[action.songIdx].id
+        return Object.assign({}, state, {currentSongIdx: action.songIdx, currentSongId})
       } else {
         return state
       }
