@@ -5,7 +5,8 @@ import client from './client'
 import profiles from './profiles'
 import ui from './ui'
 import popup from './popup'
+import player from './player'
 
-const rootReducer = combineReducers({profiles, client, ui, popup, routing: routerReducer});
+const rootReducer = combineReducers({profiles, client, ui, popup, player, routing: routerReducer});
 
 export default rootReducer;

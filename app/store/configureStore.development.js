@@ -47,6 +47,12 @@ const defaultState = {
       searchKeywords: ''
     }
   },
+  player: {
+    songs: [],
+    status: 'stop',
+    currentPlaylistId: '',
+    currentSongIdx: null
+  },
   ui: {
     loadingOverlay: false,
   },
