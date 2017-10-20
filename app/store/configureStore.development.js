@@ -45,7 +45,8 @@ const defaultState = {
     songs: [],
     status: 'stop',
     currentPlaylistId: '',
-    currentSongIdx: null
+    currentSongIdx: null,
+    currentSongId: null
   },
   ui: {
     loadingOverlay: false,
