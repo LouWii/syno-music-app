@@ -44,6 +44,15 @@ class ASClient extends React.Component {
   }
 
   handlePlaySong(songIdx) {
+    const songs = this.props.client.albums[this.state.selectedArtistName][this.state.selectedAlbumIdx].songs
+    const playlistId = this.state.selectedArtistName+'_-_'+this.state.selectedAlbum.name+'-_-'+songs.length
+    if (this.props.player.currentPlaylistId != playlistId) {
+      this.props.setPlayerSongs(
+        songs,
+        playlistId
+      )
+    }
+    this.props.setPlayerCurrentSong(songIdx)
     this.setState({selectedSongIdx: songIdx})
   }
 
