@@ -1,5 +1,6 @@
 import React from 'react';
 import SongsList from './SongsList'
+import Player from './Player'
 import '../styles/ASClient.global.css'
 
 class ASClient extends React.Component {
@@ -8,6 +9,7 @@ class ASClient extends React.Component {
 
     this.handleArtistSelect = this.handleArtistSelect.bind(this)
     this.handleAlbumSelect = this.handleAlbumSelect.bind(this)
+    this.handlePlaySong = this.handlePlaySong.bind(this)
 
     const { idx } = this.props.params;
     const profile = this.props.profiles[idx];
@@ -15,7 +17,8 @@ class ASClient extends React.Component {
     const selectedArtistName = null
     const selectedAlbum = null
     const selectedAlbumIdx = null
-    this.state = { profile, idx, selectedArtist, selectedArtistName, selectedAlbum, selectedAlbumIdx }
+    const selectedSongIdx = null
+    this.state = { profile, idx, selectedArtist, selectedArtistName, selectedAlbum, selectedAlbumIdx, selectedSongIdx }
   }
 
   handleArtistSelect(event) {
@@ -39,6 +42,10 @@ class ASClient extends React.Component {
 
       this.setState({selectedAlbum: album, selectedAlbumIdx: albumIdx})
     }
+  }
+
+  handlePlaySong(songIdx) {
+    this.setState({selectedSongIdx: songIdx})
   }
 
   componentDidMount() {
@@ -87,7 +94,17 @@ class ASClient extends React.Component {
           }
         </div>
         {albumHasSongs &&
-          <SongsList songs={this.props.client.albums[this.state.selectedArtistName][this.state.selectedAlbumIdx].songs} />
+          <SongsList
+            songs={this.props.client.albums[this.state.selectedArtistName][this.state.selectedAlbumIdx].songs}
+            handlePlaySong={this.handlePlaySong}
+          />
+        }
+        {albumHasSongs && this.state.selectedSongIdx &&
+          <Player
+          profile={this.state.profile}
+          songs={this.props.client.albums[this.state.selectedArtistName][this.state.selectedAlbumIdx].songs}
+          songIdx={this.state.selectedSongIdx}
+          />
         }
       </div>
     )
