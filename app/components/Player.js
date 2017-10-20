@@ -26,17 +26,17 @@ class Player extends React.Component {
         this.setState({songUrl})
       }
     }
+
+    let audio = document.getElementById('audio')
+    if (this.props.player.status === 'play') {
+      audio.play()
+    } else {
+      audio.pause()
+    }
   }
 
   handlePlayPauseClick() {
-    let audio = document.getElementById('audio')
-    if (this.state.playing) {
-      audio.pause()
-      this.setState({playing: false})
-    } else {
-      audio.play()
-      this.setState({playing: true})
-    }
+    this.props.playerPlayPause()
     // console.log(audio.currentSrc, audio.currentTime, audio.duration)
   }
 
