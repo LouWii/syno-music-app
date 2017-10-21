@@ -126,12 +126,12 @@ class ASClient extends React.Component {
         </div> */}
         <div className="list-container artists-list-container">
           <header>
-            <h3>
-            <button className="btn-no-background" onClick={this.handleArtistBack}>
+            <h4>
+              <button className="btn-no-background" onClick={this.handleArtistBack}>
                 <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               </button>
               Artists
-            </h3>
+            </h4>
           </header>
           <div className="content">
             <ul className="artists-list">
@@ -158,12 +158,13 @@ class ASClient extends React.Component {
         </div> */}
         <div className={"list-container sliding-container albums-list-container"+(this.state.selectedArtistName?' active':'')}>
           <header>
-            <h3>
+            <h5>{this.state.selectedArtistName}</h5>
+            <h4>
               <button className="btn-no-background" onClick={this.handleAlbumBack}>
                 <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               </button>
               Albums
-            </h3>
+            </h4>
           </header>
           <div className="content">
             <ul className="albums-list">
@@ -182,12 +183,13 @@ class ASClient extends React.Component {
         } */}
         <div className={"list-container sliding-container songs-list-container"+(this.state.selectedAlbum?' active':'')}>
           <header>
-            <h3>
+            {albumHasSongs && <h5>{this.state.selectedArtistName} - {this.state.selectedAlbum.name}</h5>}
+            <h4>
               <button className="btn-no-background" onClick={this.handleSongBack}>
                 <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               </button>
               Songs
-            </h3>
+            </h4>
           </header>
           <div className="content">
             <ul className="albums-list">
