@@ -198,6 +198,18 @@ export function playerPlayPause() {
   }
 }
 
+export function playerPlay() {
+  return {
+    type: 'PLAYER_PLAY'
+  }
+}
+
+export function playerPause() {
+  return {
+    type: 'PLAYER_PAUSE'
+  }
+}
+
 export function playerPrevious() {
   return {
     type: 'PLAYER_PREVIOUS'

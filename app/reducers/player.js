@@ -6,6 +6,10 @@ function player(state = [], action) {
       } else {
         return Object.assign({}, state, {status: 'play'})
       }
+    case 'PLAYER_PLAY':
+      return Object.assign({}, state, {status: 'play'})
+    case 'PLAYER_PAUSE':
+      return Object.assign({}, state, {status: 'pause'})
     case 'UPDATE_PLAYER_SONGS':
       return Object.assign({}, state, {songs: action.songs, currentPlaylistId: action.currentPlaylistId})
     case 'PLAYER_NEXT':
