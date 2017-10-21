@@ -47,7 +47,7 @@
     border-radius: 3px;
     background: #8e150e;
     display: inline-block;
-    animation: load 3s ease-in-out infinite;
+    animation: load 2s ease-in-out infinite;
     position: absolute;
     bottom: 0;
     left: 15px;
@@ -55,7 +55,7 @@
 
 .song-playing-icon .bar-two {
     animation-delay: 0.1s;
-    animation: load2 3s ease-in-out infinite;
+    animation: load2 2s ease-in-out infinite;
     left: 20px;
 }
 
