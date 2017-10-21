@@ -43,6 +43,10 @@
     /* background: #1E1E1E; */
 }
 
+.list-container header h4 .glyphicon {
+    color: #1272d6;
+}
+
 .list-container header h5 {
     text-align: center;
 }
@@ -71,7 +75,7 @@
         to right, 
         rgba(18,110,205,0) 0%, 
         rgb(19, 50, 82) 25%, 
-        rgb(21, 52, 85) 75%, 
+        rgb(103, 11, 11) 75%, 
         rgba(18,110,205,0) 100%);
     border-image-slice: 1;
 }
@@ -86,6 +90,7 @@
     text-align: left;
     color: rgba(255, 255, 255, 0.63);
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;
 }
 .artists-list li button:focus {
     border: 0;
@@ -103,7 +108,15 @@
 }
 
 .albums-list li {
-    padding: 8px 0;
+    padding: 12px 10px;
+    border-bottom: 1px solid rgb(82, 16, 109);
+    border-image: linear-gradient(
+        to right,
+        rgba(18,110,205,0) 0%,
+        rgb(82, 16, 109) 28%,
+        rgb(103, 11, 11) 75%,
+        rgba(18,110,205,0) 100%);
+    border-image-slice: 1;
 }
 
 .albums-list li button {
@@ -112,6 +125,9 @@
     background: none;
     border: 0;
     text-align: left;
+    color: rgba(255, 255, 255, 0.63);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;
 }
 
 .songs-list-container {
