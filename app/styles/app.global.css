@@ -2,6 +2,9 @@
 @import "~source-sans-pro/source-sans-pro.css";
 
 
+button {
+  outline: none;
+}
 
 body {
   margin: 0;

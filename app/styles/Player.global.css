@@ -6,4 +6,41 @@
     z-index: 100;
     padding: 5px 10px;
     background: #5E81AC;
+    background: linear-gradient(45deg, #151212 0%,#282a2f 100%);
+    border-top: 1px solid #efefef;
+    border-image: linear-gradient(to right, rgba(18,110,205,1) 0%, rgba(199,20,0,1) 100%);
+    border-image-slice: 1;
+}
+
+.player .controls {
+    text-align: center;
+}
+
+.player .controls button {
+    background: none;
+    border: 0;
+}
+
+.player .controls .btn-previous, .player .controls .btn-next {
+    color: #a0a0a0;
+}
+
+.player .controls .btn-play {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #1272d6;
+    border-radius: 50%;
+    /* border-image: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(199,20,0,1) 100%); */
+    /* border-image-slice: 1; */
+    color: #a0a0a0;
+}
+
+.player .playing-song {
+    margin-top: 8px;
+    text-align: center;
+    color: #2e6290;
+}
+
+.player .playing-song .song-name {
+    font-weight: bold;
 }

@@ -35,7 +35,16 @@
     right: 0;
     bottom: 0;
     overflow-y: auto;
-    background: #434C5E;
+    /* background: #434C5E; */
+    /* from #171C27 to #202837 */
+    background: linear-gradient(45deg, #171C27 0%,#212939 100%);
+    background: linear-gradient(45deg, #232833 0%,#0d131f 100%);
+    background: #1d1c1e;
+    /* background: #1E1E1E; */
+}
+
+.list-container header h5 {
+    text-align: center;
 }
 
 .sliding-container {
@@ -56,10 +65,18 @@
     padding: 0
 }
 .artists-list li {
-    padding: 8px 0;
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    border-image: linear-gradient(
+        to right, 
+        rgba(18,110,205,0) 0%, 
+        rgb(19, 50, 82) 25%, 
+        rgb(21, 52, 85) 75%, 
+        rgba(18,110,205,0) 100%);
+    border-image-slice: 1;
 }
 .artists-list li:nth-child(odd) {
-    background: rgba(0, 0, 0, 0.2);
+    /* background: rgba(0, 0, 0, 0.2); */
 }
 .artists-list li button {
     display: block;
@@ -67,6 +84,12 @@
     background: none;
     border: 0;
     text-align: left;
+    color: rgba(255, 255, 255, 0.63);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.artists-list li button:focus {
+    border: 0;
+    outline: none;
 }
 
 .albums-list-container {
