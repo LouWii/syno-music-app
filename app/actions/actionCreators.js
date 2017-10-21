@@ -210,6 +210,12 @@ export function playerNext() {
   }
 }
 
+export function playerMuteUnmute() {
+  return {
+    type: 'PLAYER_MUTE_UNMUTE'
+  }
+}
+
 export function setPlayerSongs(songs, currentPlaylistId='') {
   return {
     type: 'UPDATE_PLAYER_SONGS',

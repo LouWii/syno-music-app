@@ -31,6 +31,7 @@ class Player extends React.Component {
     } else {
       audio.pause()
     }
+    audio.muted = this.props.player.muted
   }
 
   handlePlayPauseClick() {
@@ -44,6 +45,10 @@ class Player extends React.Component {
 
   handleNextClick() {
     this.props.playerNext()
+  }
+
+  handleMuteClick() {
+    this.props.playerMuteUnmute();
   }
 
   render() {

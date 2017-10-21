@@ -44,6 +44,7 @@ const defaultState = {
   player: {
     songs: [],
     status: 'stop',
+    muted: false,
     currentPlaylistId: '',
     currentSongIdx: null,
     currentSongId: null

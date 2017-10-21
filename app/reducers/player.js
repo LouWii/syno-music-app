@@ -29,6 +29,8 @@ function player(state = [], action) {
       } else {
         return state
       }
+    case 'PLAYER_MUTE_UNMUTE':
+      return Object.assign({}, state, {muted: !state.muted})
     default:
       return state
   }
