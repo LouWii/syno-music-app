@@ -1,6 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "~source-sans-pro/source-sans-pro.css";
 
-@import "../vendors/google-fonts/google-fonts.css";
+
 
 body {
   margin: 0;
