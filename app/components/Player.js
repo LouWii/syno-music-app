@@ -1,5 +1,6 @@
 import React from 'react';
 import { as } from '../utils/syno-api'
+import {getHumanDuration} from '../utils/utils'
 import '../styles/Player.global.css'
 
 class Player extends React.Component {
@@ -53,6 +54,10 @@ class Player extends React.Component {
 
   render() {
     const playPauseActionText = (this.props.player.status==='play'?<i className="glyphicon glyphicon-pause"></i>:<i className="glyphicon glyphicon-play"></i>)
+    let currentSong = null
+    if (this.props.player.currentSongIdx || this.props.player.currentSongIdx === 0) {
+      currentSong = this.props.player.songs[this.props.player.currentSongIdx]
+    }
     return (
       <div className="player">
         <div className="controls">
@@ -61,11 +66,16 @@ class Player extends React.Component {
           <button className="btn-next" onClick={this.handleNextClick} type="button"><i className="glyphicon glyphicon-step-forward"></i></button>
         </div>
         <p style={{display: "none"}}>{this.props.player.songs.length} loaded ({this.props.player.currentPlaylistId}) - Song {this.props.player.currentSongIdx} - Status {this.props.player.status}</p>
-        { (this.props.player.currentSongIdx || this.props.player.currentSongIdx === 0) &&
+
         <audio id="audio" src={this.state.songUrl} ></audio>
-        }
-        { (this.props.player.currentSongIdx || this.props.player.currentSongIdx === 0) &&
-        <p className="playing-song"><span className="song-name">{this.props.player.songs[this.props.player.currentSongIdx].title}</span> <span className="song-artist">{this.props.player.songs[this.props.player.currentSongIdx].additional.song_tag.artist}</span></p>
+
+        <div className="song-progess">
+          <div className="song-current-time"></div>
+          <div className="song-timebar"></div>
+          <div className="song-total-time">{getHumanDuration(currentSong.additional.song_audio.duration)}</div>
+        </div>
+        { currentSong &&
+        <p className="playing-song"><span className="song-name">{currentSong.title}</span> <span className="song-artist">{currentSong.additional.song_tag.artist}</span></p>
         }
       </div>
     )
