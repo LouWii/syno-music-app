@@ -47,18 +47,20 @@ class Player extends React.Component {
   }
 
   render() {
-    const playPauseActionText = (this.props.player.status==='play'?'Pause':'Play')
+    const playPauseActionText = (this.props.player.status==='play'?<i className="glyphicon glyphicon-pause"></i>:<i className="glyphicon glyphicon-play"></i>)
     return (
       <div className="player">
-        <button onClick={this.handlePrevClick} type="button">Prev</button>
-        <button onClick={this.handlePlayPauseClick} type="button">{playPauseActionText}</button>
-        <button onClick={this.handleNextClick} type="button">Next</button>
-        <p>{this.props.player.songs.length} loaded ({this.props.player.currentPlaylistId}) - Song {this.props.player.currentSongIdx} - Status {this.props.player.status}</p>
+        <div className="controls">
+          <button className="btn-previous" onClick={this.handlePrevClick} type="button"><i className="glyphicon glyphicon-step-backward"></i></button>
+          <button className="btn-play" onClick={this.handlePlayPauseClick} type="button">{playPauseActionText}</button>
+          <button className="btn-next" onClick={this.handleNextClick} type="button"><i className="glyphicon glyphicon-step-forward"></i></button>
+        </div>
+        <p style={{display: "none"}}>{this.props.player.songs.length} loaded ({this.props.player.currentPlaylistId}) - Song {this.props.player.currentSongIdx} - Status {this.props.player.status}</p>
         { (this.props.player.currentSongIdx || this.props.player.currentSongIdx === 0) &&
         <audio id="audio" src={this.state.songUrl} ></audio>
         }
         { (this.props.player.currentSongIdx || this.props.player.currentSongIdx === 0) &&
-        <p><small>{this.props.player.songs[this.props.player.currentSongIdx].title}</small></p>
+        <p className="playing-song"><span className="song-name">{this.props.player.songs[this.props.player.currentSongIdx].title}</span> <span className="song-artist">{this.props.player.songs[this.props.player.currentSongIdx].additional.song_tag.artist}</span></p>
         }
       </div>
     )
