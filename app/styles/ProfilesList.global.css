@@ -1,5 +1,6 @@
-.profiles-list h2 {
-
+.profiles-list {
+  padding: 0 25px;
+  width: 100%;
 }
 
 .dark-theme .profiles-list h2 {

@@ -17,9 +17,9 @@ class ProfilesList extends React.Component {
 
   render() {
     return (
-      <div className="profiles-list container-small">
+      <div className="profiles-list">
         <h2>Profiles <Link className="btn btn-default btn-xs" to={'/profiles/add'}>+</Link></h2>
-        <div className="profiles row-fluid">
+        <div className="profiles">
           {this.props.profiles.map((profile, idx) => this.renderProfile(idx, profile))}
         </div>
       </div>

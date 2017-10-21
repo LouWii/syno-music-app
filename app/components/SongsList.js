@@ -28,7 +28,6 @@ class SongsList extends React.Component {
   render() {
     return (
     <div>
-      <h4>Songs</h4>
       <table className="songs-list">
         <tbody>
         {this.props.songs.map(function(element, idx){
