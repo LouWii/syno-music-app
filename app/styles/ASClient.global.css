@@ -119,6 +119,10 @@
     border-image-slice: 1;
 }
 
+.albums-list li:first-child {
+    border-top: 1px solid rgb(82, 16, 109);
+}
+
 .albums-list li button {
     display: block;
     width: 100%;
