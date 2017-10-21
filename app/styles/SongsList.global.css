@@ -36,46 +36,103 @@
 .song-playing-icon {
     position: relative;
     margin: 0 auto;
+    height: 15px;
+    vertical-align: bottom;
 }
 
 .song-playing-icon .bar {
-    height: 20px;
+    height: 4px;
     width: 3px;
     margin-right: 2px;
     border-radius: 3px;
     background: #8e150e;
     display: inline-block;
     animation: load 3s ease-in-out infinite;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
 }
 
 .song-playing-icon .bar-two {
     animation-delay: 0.1s;
+    animation: load2 3s ease-in-out infinite;
+    left: 20px;
+}
+
+.song-playing-icon .bar-three {
+    animation-delay: 0.6s;
+    left: 25px;
+}
+
+.song-playing-icon.paused .bar {
+    animation: none;
+    height: 2px;
 }
 
 @keyframes load {
 	0%,
 	100% {
-		transform: scaleY(1);
-		/* background: #03A9F4; */
+		/* transform: scaleY(1); */
+        /* background: #03A9F4; */
+        height: 13px;
 	}
 	16.67% {
-		transform: scaleY(2.2);
-		/* background: #FF5722; */
+		/* transform: scaleY(1.4); */
+        /* background: #FF5722; */
+        height: 10px;
 	}
 	33.33% {
-		transform: scaleY(1);
-		/* background: #FF5252; */
+		/* transform: scaleY(1); */
+        /* background: #FF5252; */
+        height: 12px;
 	}
 	50% {
-		transform: scaleY(1.6);
-		/* background: #E91E63; */
+		/* transform: scaleY(1.6); */
+        /* background: #E91E63; */
+        height: 7px;
 	}
 	66.67% {
-		transform: scaleY(1);
-		/* background: #9C27B0; */
+		/* transform: scaleY(1); */
+        /* background: #9C27B0; */
+        height: 11px;
 	}
 	83.34% {
-		transform: scaleY(2);
-		/* background: #673AB7; */
+		/* transform: scaleY(1.5); */
+        /* background: #673AB7; */
+        height: 7px;
 	}
-} 
+}
+
+@keyframes load2 {
+	0%,
+	100% {
+		/* transform: scaleY(1); */
+        /* background: #03A9F4; */
+        height: 15px;
+	}
+	16.67% {
+		/* transform: scaleY(1.8); */
+        /* background: #FF5722; */
+        height: 8px;
+	}
+	33.33% {
+		/* transform: scaleY(1); */
+        /* background: #FF5252; */
+        height: 13px;
+	}
+	50% {
+		/* transform: scaleY(1.5); */
+        /* background: #E91E63; */
+        height: 15px;
+	}
+	66.67% {
+		/* transform: scaleY(1); */
+        /* background: #9C27B0; */
+        height: 6px;
+	}
+	83.34% {
+		/* transform: scaleY(1.2); */
+        /* background: #673AB7; */
+        height: 11px;
+	}
+}
