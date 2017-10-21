@@ -1,4 +1,5 @@
 import React from 'react';
+import {getHumanDuration} from '../utils/utils'
 import '../styles/SongsList.global.css'
 
 class SongsList extends React.Component {
@@ -6,18 +7,6 @@ class SongsList extends React.Component {
     super(props)
 
     this.handlePlayClick = this.handlePlayClick.bind(this)
-  }
-
-  humanDuration(duration) {
-    var sec_num = parseInt(duration, 10); // don't forget the second param
-    var hours   = Math.floor(sec_num / 3600);
-    var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
-    var seconds = sec_num - (hours * 3600) - (minutes * 60);
-
-    if (hours   < 10) {hours   = "0"+hours;}
-    if (minutes < 10) {minutes = "0"+minutes;}
-    if (seconds < 10) {seconds = "0"+seconds;}
-    return (hours!=='00'?hours+':':'')+minutes+':'+seconds;
   }
 
   handlePlayClick(event) {
@@ -44,7 +33,7 @@ class SongsList extends React.Component {
                 </div>}
             </td>
             <td>{element.title}</td>
-            <td className="duration-cell">{this.humanDuration(element.additional.song_audio.duration)}</td>
+            <td className="duration-cell">{getHumanDuration(element.additional.song_audio.duration)}</td>
             </tr>
         }, this)
         }
