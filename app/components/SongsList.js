@@ -35,6 +35,11 @@ class SongsList extends React.Component {
           return <tr key={idx} className={isCurrentSong?'current-song':''}>
             <td className="play-cell">
               <button className="bttn bttn-default btn-sm" type="button" onClick={this.handlePlayClick} data-song-idx={idx}><i className="glyphicon glyphicon-play"></i></button>
+              <div className="song-playing-icon">
+                <div className="bar bar-one"></div>
+                <div className="bar bar-two"></div>
+                <div className="bar bar-three"></div>
+              </div>
             </td>
             <td>{element.title}</td>
             <td className="duration-cell">{this.humanDuration(element.additional.song_audio.duration)}</td>

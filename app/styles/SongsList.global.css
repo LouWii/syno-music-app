@@ -23,3 +23,59 @@
 .songs-list td {
     padding: 3px 0;
 }
+
+.songs-list .play-cell button {
+    background: none;
+    border: 0;
+    padding-left: 15px;
+    color: #8e150e;
+    color: #451259;
+    color: #701992;
+}
+
+.song-playing-icon {
+    position: relative;
+    margin: 0 auto;
+}
+
+.song-playing-icon .bar {
+    height: 20px;
+    width: 3px;
+    margin-right: 2px;
+    border-radius: 3px;
+    background: #8e150e;
+    display: inline-block;
+    animation: load 3s ease-in-out infinite;
+}
+
+.song-playing-icon .bar-two {
+    animation-delay: 0.1s;
+}
+
+@keyframes load {
+	0%,
+	100% {
+		transform: scaleY(1);
+		/* background: #03A9F4; */
+	}
+	16.67% {
+		transform: scaleY(2.2);
+		/* background: #FF5722; */
+	}
+	33.33% {
+		transform: scaleY(1);
+		/* background: #FF5252; */
+	}
+	50% {
+		transform: scaleY(1.6);
+		/* background: #E91E63; */
+	}
+	66.67% {
+		transform: scaleY(1);
+		/* background: #9C27B0; */
+	}
+	83.34% {
+		transform: scaleY(2);
+		/* background: #673AB7; */
+	}
+} 
