@@ -53,27 +53,37 @@ export function clientLoaded() {
   }
 }
 
+/**
+ * Update the loading status of our client
+ * @param {string} status ('loggingIn', 'loadingArtists', 'loadingAlbums', 'loadingSongs')
+ */
+export function updateClientLoadingStatus(status) {
+  return {
+    type: 'CLIENT_UPDATE_LOADING_STATUS',
+    status
+  }
+}
+
 export function asclientLogin(profile, autoRefresh = false) {
   return dispatch => {
     dispatch(clientLoading())
-    dispatch(uiShowLoadingOverlay())
+    dispatch(updateClientLoadingStatus('loggingIn'))
     fetch(synoLoginQuery(profile), {credentials: 'include'}).then( (response) => {
       if(response.status === 200){
         response.json().then( (json) => {
           dispatch(clientLoggedIn(json.data.sid))
+          dispatch(updateClientLoadingStatus('loadingArtists'))
           dispatch(clientListArtists(profile, autoRefresh))
         })
 
       } else {
         console.error(response)
         dispatch(clientLoaded())
-        dispatch(uiHideLoadingOverlay())
       }
     }, (response) => {
       // Promise failed/rejected
       console.error(response)
       dispatch(clientLoaded())
-      dispatch(uiHideLoadingOverlay())
     })
   }
 }
@@ -90,22 +100,15 @@ export function clientListArtists(profile) {
     fetch(as.listArtistsQuery(profile), {credentials: 'include'}).then( (response) => {
       if(response.status === 200){
         response.json().then( (json) => {
-          // dispatch(clientListReceived(json.data.tasks, json.data.total))
+          dispatch(updateClientLoadingStatus(''))
           dispatch(clientListArtistsReceived(json.data.artists))
-          dispatch(clientLoaded())
-          dispatch(uiHideLoadingOverlay())
-          dispatch({type: 'CLIENT_TASKS_LOADED'})
         })
       } else {
         console.error(response)
-        dispatch(clientLoaded())
-        dispatch(uiHideLoadingOverlay())
       }
     }, (response) => {
       // Promise failed/rejected
       console.error(response)
-      dispatch(clientLoaded())
-      dispatch(uiHideLoadingOverlay())
     })
   }
 }
@@ -122,12 +125,11 @@ export function clientListArtistAlbums(profile, artist) {
     fetch(as.listArtistAlbumsQuery(profile, artist), {credentials: 'include'}).then( (response) => {
       if(response.status === 200){
         response.json().then( (json) => {
-          dispatch(uiHideLoadingOverlay())
+          dispatch(updateClientLoadingStatus(''))
           dispatch(clientListArtistAlbumsReceived(artist, json.data.albums))
         })
       } else {
         console.error(response)
-        dispatch(uiHideLoadingOverlay())
       }
     })
   }
@@ -146,7 +148,7 @@ export function clientListAlbumSongs(profile, artist, album, albumArtist) {
     fetch(as.listAlbumSongsQuery(profile, artist, album, albumArtist), {credentials: 'include'}).then( (response) => {
       if(response.status === 200){
         response.json().then( (json) => {
-          dispatch(uiHideLoadingOverlay())
+          dispatch(updateClientLoadingStatus(''))
           dispatch(clientListAlbumSongsReceived(artist, album, albumArtist, json.data.songs))
         })
       } else {

@@ -13,6 +13,8 @@ function clients(state = [], action) {
       return Object.assign({}, state, {
         clientIsLoading: false
       })
+    case 'CLIENT_UPDATE_LOADING_STATUS':
+      return Object.assign({}, state, {loadingStatus: action.status})
     case 'ARTISTS_LIST_UPDATE':
       return Object.assign({}, state, {
         artists: action.artistsList

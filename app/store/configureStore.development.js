@@ -40,6 +40,7 @@ const defaultState = {
     autoRefresh: false,
     artists: [],
     albums: {},
+    loadingStatus: ''
   },
   player: {
     songs: [],
