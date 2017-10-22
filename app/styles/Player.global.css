@@ -39,13 +39,19 @@
 .player .playing-song {
     margin-top: 8px;
     text-align: center;
-    color: #aa0e5e;
+    color: #a02262;
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased;
     user-select: none;
     cursor: default;
 }
 
 .player .playing-song .song-name {
-    font-weight: bold;
+    font-weight: 800;
+}
+
+.player .playing-song .song-artist {
+    font-weight: 500;
 }
 
 .player .song-progress {
