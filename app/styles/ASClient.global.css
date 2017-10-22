@@ -4,6 +4,8 @@
     position: relative;
     flex: 1;
     overflow: hidden;
+    user-select: none;
+    cursor: default;
 }
 
 .asclient .form-inline {
