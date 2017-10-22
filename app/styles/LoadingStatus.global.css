@@ -25,7 +25,7 @@
     height: 100%;
     width: 3px;
     margin: 0 3px 0 0;
-    animation: load 3.5s ease-in-out infinite;
+    animation: loading-status-anim 3.5s ease-in-out infinite;
 }
 
 .loading-animation .bar-two {
@@ -51,4 +51,33 @@
 .loading-info p {
     text-align: center;
     color: rgba(255, 255, 255, 0.5);
+}
+
+
+@keyframes loading-status-anim {
+	0%,
+	100% {
+		transform: scaleY(1);
+		/* background: #03A9F4; */
+	}
+	16.67% {
+		transform: scaleY(2.5);
+		/* background: #FF5722; */
+	}
+	33.33% {
+		transform: scaleY(1);
+		/* background: #FF5252; */
+	}
+	50% {
+		transform: scaleY(2.5);
+		/* background: #E91E63; */
+	}
+	66.67% {
+		transform: scaleY(1);
+		/* background: #9C27B0; */
+	}
+	83.34% {
+		transform: scaleY(2.5);
+		/* background: #673AB7; */
+	}
 }
