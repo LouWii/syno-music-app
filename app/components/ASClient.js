@@ -87,6 +87,11 @@ class ASClient extends React.Component {
       )
     }
     this.props.setPlayerCurrentSong(songIdx)
+    // Delay Play action because it's faster than setting the current song and will fail
+    let _this = this
+    setTimeout(function() {
+      _this.props.playerPlay()
+    }, 400);
     this.setState({selectedSongIdx: songIdx})
   }
 
