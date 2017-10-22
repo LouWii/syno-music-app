@@ -45,6 +45,7 @@ class Player extends React.Component {
 
     let audio = document.getElementById('audio')
     if (this.props.player.status === 'play') {
+      // TODO: catch exception here when audio file isn't accessible
       audio.play()
     } else {
       audio.pause()
