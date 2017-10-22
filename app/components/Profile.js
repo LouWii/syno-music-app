@@ -21,8 +21,8 @@ class Profile extends Component {
           <p><strong>Login</strong> {this.props.profile.login}</p>
         </div>
         <div className="actions">
-          <Link className="btn btn-primary btn-sm" to={`/profiles/${this.props.idx}`}>Connect</Link>
-          <button type="button" className="btn btn-danger btn-xs" onClick={this.handleDelete}>X</button>
+          <Link className="btn btn-sm btn-get-music" to={`/profiles/${this.props.idx}`}><i className="glyphicon glyphicon-music"></i> Get Music</Link>
+          <button type="button" className="btn-trash" onClick={this.handleDelete}><i className="glyphicon glyphicon-trash"></i></button>
         </div>
       </div>
     )
