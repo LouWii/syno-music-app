@@ -32,7 +32,7 @@ class SongsList extends React.Component {
                   <div className="bar bar-three"></div>
                 </div>}
             </td>
-            <td>{element.title}</td>
+            <td className="title-cell">{element.title}</td>
             <td className="duration-cell">{getHumanDuration(element.additional.song_audio.duration)}</td>
             </tr>
         }, this)

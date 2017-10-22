@@ -6,12 +6,6 @@
     width: 45px;
 }
 
-.songs-list .duration-cell {
-    width: 70px;
-    text-align: right;
-    padding: 0 10px;
-}
-
 .songs-list tr:hover {
     background-color: rgba(255, 255, 255, .02);
 }
@@ -28,9 +22,7 @@
     background: none;
     border: 0;
     padding-left: 15px;
-    color: #8e150e;
-    color: #451259;
-    color: #701992;
+    color: #9a0b8f;
 }
 
 .song-playing-icon {
@@ -45,7 +37,7 @@
     width: 3px;
     margin-right: 2px;
     border-radius: 3px;
-    background: #8e150e;
+    background: #da2a5e;
     display: inline-block;
     animation: load 2s ease-in-out infinite;
     position: absolute;
@@ -67,6 +59,21 @@
 .song-playing-icon.paused .bar {
     animation: none;
     height: 2px;
+}
+
+.songs-list .title-cell {
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 500
+}
+
+.songs-list .duration-cell {
+    width: 70px;
+    text-align: right;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0 10px;
+    color: rgba(255, 255, 255, .2);
+    font-weight: 300;
 }
 
 @keyframes load {
