@@ -25,6 +25,10 @@
     color: #9a0b8f;
 }
 
+.songs-list .play-cell button:active {
+    transform: scale(0.9);
+}
+
 .song-playing-icon {
     position: relative;
     margin: 0 auto;

@@ -23,6 +23,16 @@
 
 .player .controls .btn-previous, .player .controls .btn-next {
     color: #9c0b8a;
+    transition: text-shadow .25s;
+}
+
+.player .controls .btn-previous:active, .player .controls .btn-next:active {
+    text-shadow: none;
+    transform: scale(0.9);
+}
+
+.player .controls .btn-previous:hover, .player .controls .btn-next:hover {
+    text-shadow: 0px 0px 3px #a351a9;
 }
 
 .player .controls .btn-play {
@@ -34,6 +44,21 @@
     /* border-image-slice: 1; */
     color: #a0a0a0;
     background: linear-gradient(45deg, rgba(137,7,197,1) 0%, rgba(199,20,0,1) 100%);
+    transition: box-shadow .25s;
+}
+
+.player .controls .btn-play:active {
+    transform: scale(0.9);
+}
+
+.player .controls .btn-play:hover {
+    box-shadow: 0px 0px 3px #a351a9;
+}
+.player .controls .btn-play:hover .glyphicon {
+    transition: transform .25s;
+}
+.player .controls .btn-play:hover .glyphicon {
+    transform: scale(1.07);
 }
 
 .player .playing-song {

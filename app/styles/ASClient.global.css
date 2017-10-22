@@ -82,6 +82,9 @@
     -webkit-font-smoothing: antialiased;
 }
 
+.list-container header .list-title button:active {
+    transform: scale(0.9);
+}
 .list-container header .list-title .glyphicon {
     color: #1272d6;
 }
@@ -142,9 +145,9 @@
     -webkit-font-smoothing: antialiased;
     font-size: 17px;
 }
-.artists-list li button:focus {
-    border: 0;
-    outline: none;
+
+.artists-list li button:active {
+    transform: scale(0.98);
 }
 
 .albums-list-container {
@@ -187,6 +190,10 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 17px;
     -webkit-font-smoothing: antialiased;
+}
+
+.albums-list li button:active {
+    transform: scale(0.98);
 }
 
 .songs-list-container {
