@@ -1,5 +1,6 @@
 import React from 'react';
 import SongsList from './SongsList'
+import LoadingStatus from './LoadingStatus'
 import { hashHistory } from 'react-router'
 import '../styles/ASClient.global.css'
 
@@ -7,10 +8,8 @@ class ASClient extends React.Component {
   constructor(props) {
     super(props)
 
-    this.handleArtistSelect = this.handleArtistSelect.bind(this)
     this.handleArtistClick = this.handleArtistClick.bind(this)
     this.handleArtistBack = this.handleArtistBack.bind(this)
-    this.handleAlbumSelect = this.handleAlbumSelect.bind(this)
     this.handleAlbumClick = this.handleAlbumClick.bind(this)
     this.handleAlbumBack = this.handleAlbumBack.bind(this)
     this.handlePlaySong = this.handlePlaySong.bind(this)
@@ -24,28 +23,17 @@ class ASClient extends React.Component {
     const selectedArtistNameUI = ''
     const selectedAlbum = null
     const selectedAlbumIdx = null
+    // This is only used for the UI, is meant to stay displayed
     const selectedAlbumNameUI = ''
     const selectedSongIdx = null
     this.state = { profile, idx, selectedArtist, selectedArtistName, selectedArtistNameUI, selectedAlbum, selectedAlbumIdx, selectedAlbumNameUI, selectedSongIdx }
-  }
-
-  handleArtistSelect(event) {
-    if (event.target.value && event.target.value !== '') {
-      const artistIdx = parseInt(event.target.value, 10)
-      const artist = this.props.client.artists[artistIdx]
-      if (!this.props.client.albums[artist.name] || !this.props.client.albums[artist.name].length) {
-        this.props.uiShowLoadingOverlay()
-        this.props.clientListArtistAlbums(this.state.profile, artist.name)
-      }
-      this.setState({selectedArtist: artistIdx, selectedArtistName: artist.name, selectedArtistNameUI: artist.name})
-    }
   }
 
   handleArtistClick(event) {
     const artistIdx = parseInt(event.currentTarget.dataset.idx)
     const artist = this.props.client.artists[artistIdx]
     if (!this.props.client.albums[artist.name] || !this.props.client.albums[artist.name].length) {
-      this.props.uiShowLoadingOverlay()
+      this.props.updateClientLoadingStatus('loadingAlbums')
       this.props.clientListArtistAlbums(this.state.profile, artist.name)
     }
     this.setState({selectedArtist: artistIdx, selectedArtistName: artist.name, selectedArtistNameUI: artist.name})
@@ -56,23 +44,12 @@ class ASClient extends React.Component {
     hashHistory.goBack()
   }
 
-  handleAlbumSelect(event) {
-    if (event.target.value && event.target.value !== '') {
-      const albumIdx = parseInt(event.target.value, 10)
-      const album = this.props.client.albums[this.state.selectedArtistName][albumIdx]
-      this.props.uiShowLoadingOverlay()
-      this.props.clientListAlbumSongs(this.state.profile, this.state.selectedArtistName, album.name, album.album_artist)
-
-      this.setState({selectedAlbum: album, selectedAlbumIdx: albumIdx, selectedAlbumNameUI: album.name})
-    }
-  }
-
   handleAlbumClick(event) {
     const albumIdx = parseInt(event.currentTarget.dataset.idx)
     const album = this.props.client.albums[this.state.selectedArtistName][albumIdx]
     if (!this.props.client.albums[this.state.selectedArtistName][albumIdx].songs
       || !this.props.client.albums[this.state.selectedArtistName][albumIdx].songs.length) {
-      this.props.uiShowLoadingOverlay()
+      this.props.updateClientLoadingStatus('loadingSongs')
       this.props.clientListAlbumSongs(this.state.profile, this.state.selectedArtistName, album.name, album.album_artist)
     }
 
@@ -134,6 +111,9 @@ class ASClient extends React.Component {
             </div>
           </header>
           <div className="content">
+            {(this.props.client.loadingStatus === 'loggingIn' || this.props.client.loadingStatus === 'loadingArtists') &&
+              <LoadingStatus status={this.props.client.loadingStatus} />
+            }
             <ul className="artists-list">
               {this.props.client.artists && this.props.client.artists.map(function(element, idx) {
                 if(element.name !== '') return <li key={idx} ><button onClick={this.handleArtistClick} data-idx={idx}>{element.name}</button></li>
@@ -152,6 +132,9 @@ class ASClient extends React.Component {
             </div>
           </header>
           <div className="content">
+            {(this.props.client.loadingStatus === 'loadingAlbums') &&
+              <LoadingStatus status={this.props.client.loadingStatus} />
+            }
             <ul className="albums-list">
               {artistHasAlbums && this.props.client.albums[this.state.selectedArtistName].map(function(element, idx){
                 return <li key={idx}><button onClick={this.handleAlbumClick} data-idx={idx}>{element.name}</button></li>
@@ -170,6 +153,9 @@ class ASClient extends React.Component {
             </div>
           </header>
           <div className="content">
+            {(this.props.client.loadingStatus === 'loadingSongs') &&
+              <LoadingStatus status={this.props.client.loadingStatus} />
+            }
             <ul className="albums-list">
               {albumHasSongs &&
                 <SongsList
