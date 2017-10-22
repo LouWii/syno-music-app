@@ -5,8 +5,8 @@
     width: 100%;
     z-index: 100;
     padding: 12px 10px 5px;
-    background: #5E81AC;
     background: linear-gradient(45deg, #151212 0%,#282a2f 100%);
+    background: #222326;
     border-top: 1px solid #efefef;
     border-image: linear-gradient(to right, rgba(18,110,205,1) 0%, rgba(199,20,0,1) 100%);
     border-image-slice: 1;
@@ -22,17 +22,18 @@
 }
 
 .player .controls .btn-previous, .player .controls .btn-next {
-    color: #a0a0a0;
+    color: #9c0b8a;
 }
 
 .player .controls .btn-play {
     width: 40px;
     height: 40px;
-    border: 1px solid #1272d6;
+    /* border: 1px solid #1272d6; */
     border-radius: 50%;
     /* border-image: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(199,20,0,1) 100%); */
     /* border-image-slice: 1; */
     color: #a0a0a0;
+    background: linear-gradient(45deg, rgba(137,7,197,1) 0%, rgba(199,20,0,1) 100%);
 }
 
 .player .playing-song {
