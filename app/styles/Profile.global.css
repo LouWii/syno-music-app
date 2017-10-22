@@ -1,19 +1,14 @@
 .profile {
-  /* border: 1px solid #187fa1; */
   padding: 0;
   margin: 0 0 10px 0;
-  /*background: #bbe2e9;*/
   min-width: 100%;
-
-  border-top: 1px solid #efefef;
+  min-height: 1px;
+  position: relative;
+  border-top: 1px solid rgba(18,110,205,1);
   border-image: linear-gradient(to right, rgba(18,110,205,1) 0%, rgba(199,20,0,1) 100%);
   border-image-slice: 1;
-
-  /* From Bootstrap */
-  position: relative;
-  min-height: 1px;
-
   -webkit-font-smoothing: antialiased;
+  -webkit-app-region: no-drag;
 }
 
 .profile:nth-of-type(1) {
@@ -30,6 +25,7 @@
   font-size: 18px;
   font-weight: 300;
   font-family: 'Lato', sans-serif;
+  -webkit-app-region: no-drag;
 }
 
 .profile .content {
@@ -38,6 +34,7 @@
   color: rgba(255, 255, 255, .7);
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
+  -webkit-app-region: no-drag;
 }
 
 .profile .actions {
@@ -46,6 +43,7 @@
 
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  -webkit-app-region: no-drag;
 }
 
 .profile .actions .btn-get-music {

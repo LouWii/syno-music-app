@@ -22,8 +22,8 @@ class ProfileAdd extends React.Component {
 
   render() {
     return (
-      <div className="profile-add container-small">
-        <h2>Create new profile</h2>
+      <div className="profile-add">
+        <h3>Create new profile</h3>
         <form ref="profileAdd">
           <div className="form-group">
             <label htmlFor="profileName">Profile Name</label>
@@ -45,8 +45,10 @@ class ProfileAdd extends React.Component {
             <label htmlFor="profilePassword">Password</label>
             <input ref="profilePassword" type="password" className="form-control" id="profilePassword" />
           </div>
-          <button type="submit" className="btn btn-primary" onClick={this.handleSave}>Save</button>&nbsp;
-          <button type="button" className="btn btn-default" onClick={this.handleCancel}>Cancel</button>
+          <div className="form-actions">
+            <button type="submit" className="btn btn-save" onClick={this.handleSave}>Save</button>
+            <button type="button" className="btn btn-xs btn-cancel" onClick={this.handleCancel}>Cancel</button>
+          </div>
         </form>
       </div>
     );
