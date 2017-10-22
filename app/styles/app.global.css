@@ -2,9 +2,17 @@
 @import "~source-sans-pro/source-sans-pro.css";
 @import "~fonts-raleway/css/raleway.css";
 
-button {
-  outline: none;
+button, input, label {
   -webkit-app-region: no-drag;
+}
+
+button, button:active, button:focus {
+  outline: none;
+}
+
+label {
+  user-select: none;
+  cursor: default;
 }
 
 body {
