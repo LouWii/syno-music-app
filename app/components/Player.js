@@ -12,8 +12,9 @@ class Player extends React.Component {
     this.handlePrevClick = this.handlePrevClick.bind(this)
 
     const songUrl = ''
-    const playing = false
-    this.state = {songUrl, playing}
+    const currentSongTime = 0
+    this.state = {songUrl, currentSongTime}
+  }
 
   componentDidMount() {
     // Init our Audio tag events
@@ -27,7 +28,9 @@ class Player extends React.Component {
         // TODO : Stop the player
       }
     });
-    
+    setInterval(function() {
+      _this.setState({currentSongTime: audio.currentTime})
+    }, 100)
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -69,8 +72,10 @@ class Player extends React.Component {
   render() {
     const playPauseActionText = (this.props.player.status==='play'?<i className="glyphicon glyphicon-pause"></i>:<i className="glyphicon glyphicon-play"></i>)
     let currentSong = null
+    let currentSongProgress = 0
     if (this.props.player.currentSongIdx || this.props.player.currentSongIdx === 0) {
       currentSong = this.props.player.songs[this.props.player.currentSongIdx]
+      currentSongProgress = Math.floor(this.state.currentSongTime) * 100 / currentSong.additional.song_audio.duration
     }
     return (
       <div className="player">
@@ -83,9 +88,12 @@ class Player extends React.Component {
 
         <audio id="audio" src={this.state.songUrl} ></audio>
 
-        <div className="song-progess">
-          <div className="song-current-time"></div>
-          <div className="song-timebar"></div>
+        <div className="song-progress">
+          <div className="song-current-time">{getHumanDuration(this.state.currentSongTime)}</div>
+          <div className="song-timebar">
+            <div className="timebar-background"><span></span></div>
+            <div className="timebar"><span style={{width: currentSongProgress+'%'}}></span></div>
+          </div>
           <div className="song-total-time">{getHumanDuration(currentSong.additional.song_audio.duration)}</div>
         </div>
         { currentSong &&
