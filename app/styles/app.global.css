@@ -4,6 +4,7 @@
 
 button {
   outline: none;
+  -webkit-app-region: no-drag;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
 }
 
 body.dark-theme {
-  background: #3B4252;
+  background: #1d1c1e;
 }
 
 #root {
