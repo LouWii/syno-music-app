@@ -8,18 +8,6 @@
     cursor: default;
 }
 
-.asclient .form-inline {
-    margin-bottom: 10px;
-}
-
-.asclient .form-group label {
-    min-width: 100px;
-}
-
-.asclient .albums-selector {
-    animation: fadein 1s;
-}
-
 @keyframes fadein {
     from {
         opacity:0;
@@ -103,6 +91,7 @@
 
 .artists-list-container {
     z-index: 10;
+    top: 12px;
 }
 
 .artists-list-container header .list-title {
