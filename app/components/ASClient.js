@@ -20,10 +20,13 @@ class ASClient extends React.Component {
     const profile = this.props.profiles[idx];
     const selectedArtist = null
     const selectedArtistName = null
+    // This is only used for the UI, is meant to stay displayed
+    const selectedArtistNameUI = ''
     const selectedAlbum = null
     const selectedAlbumIdx = null
+    const selectedAlbumNameUI = ''
     const selectedSongIdx = null
-    this.state = { profile, idx, selectedArtist, selectedArtistName, selectedAlbum, selectedAlbumIdx, selectedSongIdx }
+    this.state = { profile, idx, selectedArtist, selectedArtistName, selectedArtistNameUI, selectedAlbum, selectedAlbumIdx, selectedAlbumNameUI, selectedSongIdx }
   }
 
   handleArtistSelect(event) {
@@ -34,7 +37,7 @@ class ASClient extends React.Component {
         this.props.uiShowLoadingOverlay()
         this.props.clientListArtistAlbums(this.state.profile, artist.name)
       }
-      this.setState({selectedArtist: artistIdx, selectedArtistName: artist.name})
+      this.setState({selectedArtist: artistIdx, selectedArtistName: artist.name, selectedArtistNameUI: artist.name})
     }
   }
 
@@ -45,7 +48,7 @@ class ASClient extends React.Component {
       this.props.uiShowLoadingOverlay()
       this.props.clientListArtistAlbums(this.state.profile, artist.name)
     }
-    this.setState({selectedArtist: artistIdx, selectedArtistName: artist.name})
+    this.setState({selectedArtist: artistIdx, selectedArtistName: artist.name, selectedArtistNameUI: artist.name})
   }
 
   handleArtistBack() {
@@ -60,7 +63,7 @@ class ASClient extends React.Component {
       this.props.uiShowLoadingOverlay()
       this.props.clientListAlbumSongs(this.state.profile, this.state.selectedArtistName, album.name, album.album_artist)
 
-      this.setState({selectedAlbum: album, selectedAlbumIdx: albumIdx})
+      this.setState({selectedAlbum: album, selectedAlbumIdx: albumIdx, selectedAlbumNameUI: album.name})
     }
   }
 
@@ -73,7 +76,7 @@ class ASClient extends React.Component {
       this.props.clientListAlbumSongs(this.state.profile, this.state.selectedArtistName, album.name, album.album_artist)
     }
 
-    this.setState({selectedAlbum: album, selectedAlbumIdx: albumIdx})
+    this.setState({selectedAlbum: album, selectedAlbumIdx: albumIdx, selectedAlbumNameUI: album.name})
   }
 
   handleAlbumBack() {
@@ -121,58 +124,32 @@ class ASClient extends React.Component {
     )
     return (
       <div className="asclient" ref="client">
-        {/* <div className="form-inline">
-          <div className="form-group">
-            <label htmlFor="artists-list">Artists</label>
-            <select id="artists-list" className="form-control" onChange={this.handleArtistSelect}>
-              <option value="">-- Artists --</option>
-              {this.props.client.artists.map(function(element, idx) {
-                return <option key={idx} value={idx}>{element.name}</option>
-              })}
-            </select>
-          </div>
-        </div> */}
         <div className="list-container artists-list-container">
           <header>
-            <h4>
+            <div className="list-title">
               <button className="btn-no-background" onClick={this.handleArtistBack}>
                 <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               </button>
               Artists
-            </h4>
+            </div>
           </header>
           <div className="content">
             <ul className="artists-list">
               {this.props.client.artists && this.props.client.artists.map(function(element, idx) {
-                return <li key={idx} ><button onClick={this.handleArtistClick} data-idx={idx}>{element.name}</button></li>
+                if(element.name !== '') return <li key={idx} ><button onClick={this.handleArtistClick} data-idx={idx}>{element.name}</button></li>
               }, this)}
             </ul>
           </div>
         </div>
-        {/* <div className="form-inline albums-selector">
-          {artistHasAlbums
-            &&
-            <div className="form-group">
-              <label htmlFor="albums-list">Albums</label>
-              <select id="albums-list" className="form-control" onChange={this.handleAlbumSelect}>
-                <option value="">-- Albums --</option>
-                {this.props.client.albums[this.state.selectedArtistName].map(function(element, idx){
-                    return <option key={idx} value={idx}>{element.name}</option>
-                  })
-                  }
-              </select>
-            </div>
-          }
-        </div> */}
         <div className={"list-container sliding-container albums-list-container"+(this.state.selectedArtistName?' active':'')}>
           <header>
-            <h5>{this.state.selectedArtistName}</h5>
-            <h4>
+            <div className="list-subtitle">{this.state.selectedArtistNameUI}</div>
+            <div className="list-title">
               <button className="btn-no-background" onClick={this.handleAlbumBack}>
                 <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               </button>
               Albums
-            </h4>
+            </div>
           </header>
           <div className="content">
             <ul className="albums-list">
@@ -182,22 +159,15 @@ class ASClient extends React.Component {
             </ul>
           </div>
         </div>
-        {/* {albumHasSongs &&
-          <SongsList
-            songs={this.props.client.albums[this.state.selectedArtistName][this.state.selectedAlbumIdx].songs}
-            handlePlaySong={this.handlePlaySong}
-            player={this.props.player}
-          />
-        } */}
         <div className={"list-container sliding-container songs-list-container"+(this.state.selectedAlbum?' active':'')}>
           <header>
-            {albumHasSongs && <h5>{this.state.selectedArtistName} - {this.state.selectedAlbum.name}</h5>}
-            <h4>
+            <div className="list-subtitle">{this.state.selectedArtistNameUI} - {this.state.selectedAlbumNameUI}</div>
+            <div className="list-title">
               <button className="btn-no-background" onClick={this.handleSongBack}>
                 <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               </button>
               Songs
-            </h4>
+            </div>
           </header>
           <div className="content">
             <ul className="albums-list">

@@ -65,7 +65,23 @@
     border: 2px solid #1d1c1e;;
 }
 
-.list-container header h4 .glyphicon {
+.list-container header .list-subtitle {
+    padding: 10px 8px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    background: linear-gradient(180deg, #303131 0%, #1b1b1b 85%, #1d1c1e 100%);
+}
+
+.list-container header .list-title {
+    padding: 0px 5px 5px;
+    text-align: left;
+    font-size: 19px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.list-container header .list-title .glyphicon {
     color: #1272d6;
 }
 
@@ -85,6 +101,10 @@
     z-index: 10;
 }
 
+.artists-list-container header .list-title {
+    padding-top: 10px;
+}
+
 .artists-list {
     list-style: none;
     margin: 0;
@@ -101,8 +121,9 @@
         rgba(18,110,205,0) 100%);
     border-image-slice: 1;
 }
-.artists-list li:nth-child(odd) {
-    /* background: rgba(0, 0, 0, 0.2); */
+
+.artists-list li:first-child {
+    border-top: 1px solid rgb(82, 16, 109);
 }
 
 .artists-list li:hover {
@@ -115,8 +136,9 @@
     background: none;
     border: 0;
     text-align: left;
-    color: rgba(255, 255, 255, 0.63);
+    color: rgba(255, 255, 255, 0.85);
     font-family: 'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
     font-size: 17px;
 }
 .artists-list li button:focus {
@@ -163,6 +185,7 @@
     color: rgba(255, 255, 255, 0.63);
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 17px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .songs-list-container {
