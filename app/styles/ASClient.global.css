@@ -54,11 +54,11 @@
 }
 
 .sliding-container {
-    transform: translateX(100%);
+    transform: translate3d(100%, 0, 0);
     transition: transform .2s ease-in-out;
 }
 .sliding-container.active {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
 }
 
 .artists-list-container {
