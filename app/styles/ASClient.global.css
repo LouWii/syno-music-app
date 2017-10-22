@@ -104,6 +104,11 @@
 .artists-list li:nth-child(odd) {
     /* background: rgba(0, 0, 0, 0.2); */
 }
+
+.artists-list li:hover {
+    background: rgba(255, 255, 255, 0.008)
+}
+
 .artists-list li button {
     display: block;
     width: 100%;
@@ -143,6 +148,10 @@
 
 .albums-list li:first-child {
     border-top: 1px solid rgb(82, 16, 109);
+}
+
+.albums-list li:hover {
+    background: rgba(255, 255, 255, 0.008)
 }
 
 .albums-list li button {
