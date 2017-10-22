@@ -14,6 +14,20 @@ class Player extends React.Component {
     const songUrl = ''
     const playing = false
     this.state = {songUrl, playing}
+
+  componentDidMount() {
+    // Init our Audio tag events
+    let audio = document.getElementById('audio')
+    let _this = this
+    audio.addEventListener('ended', function(){
+      if (_this.props.player.currentSongIdx < _this.props.player.songs.length-1) {
+        // If there's a next song, play it
+        _this.props.playerNext()
+      } else {
+        // TODO : Stop the player
+      }
+    });
+    
   }
 
   componentDidUpdate(prevProps, prevState) {
