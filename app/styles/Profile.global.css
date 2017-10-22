@@ -52,10 +52,13 @@
   border: 0;
   background: linear-gradient(45deg, rgba(137,7,197,1) 0%, rgba(199,20,0,1) 100%);
   color: #e6e4e4;
-  transition: all 0.3s;
+  transition: all 0.25s;
 }
 .profile .actions .btn-get-music:hover {
   transform: scale(1.05);
+}
+.profile .actions .btn-get-music:active {
+  transform: scale(0.98);
 }
 
 .profile .actions .btn-trash {
@@ -71,4 +74,8 @@
 
 .profile .actions .btn-trash:hover {
   opacity: 1;
+}
+
+.profile .actions .btn-trash:active {
+  transform: scale(0.92);
 }
