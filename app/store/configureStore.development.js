@@ -5,7 +5,7 @@ import { routerMiddleware, push } from 'react-router-redux';
 import createLogger from 'redux-logger';
 import rootReducer from '../reducers';
 
-const stateStorageKey = 'syno-down-app'
+const stateStorageKey = 'syno-music-app'
 
 const actionCreators = {
 
