@@ -1,0 +1,83 @@
+
+.loading-info {
+    padding: 0 25px;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    cursor: default;
+    transition: all .25s;
+}
+
+.loading-animation {
+    margin-bottom: 24px;
+}
+
+.loading-animation .animation-container {
+    position: relative;
+    height: 10px;
+    width: 36px;
+    margin: 0 auto;
+}
+
+.loading-animation .bar {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(45deg, rgba(137,7,197,1) 0%, rgba(199,20,0,1) 100%);
+    height: 100%;
+    width: 3px;
+    margin: 0 3px 0 0;
+    animation: loading-status-anim 3.5s ease-in-out infinite;
+}
+
+.loading-animation .bar-two {
+    animation-delay: 0.1s;
+}
+
+.loading-animation .bar-three {
+    animation-delay: 0.2s;
+}
+
+.loading-animation .bar-four {
+    animation-delay: 0.3s;
+}
+
+.loading-animation .bar-five {
+    animation-delay: 0.4s;
+}
+
+.loading-animation .bar-six {
+    animation-delay: 0.5s;
+}
+
+.loading-info p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+@keyframes loading-status-anim {
+	0%,
+	100% {
+		transform: scaleY(1);
+		/* background: #03A9F4; */
+	}
+	16.67% {
+		transform: scaleY(2.5);
+		/* background: #FF5722; */
+	}
+	33.33% {
+		transform: scaleY(1);
+		/* background: #FF5252; */
+	}
+	50% {
+		transform: scaleY(2.5);
+		/* background: #E91E63; */
+	}
+	66.67% {
+		transform: scaleY(1);
+		/* background: #9C27B0; */
+	}
+	83.34% {
+		transform: scaleY(2.5);
+		/* background: #673AB7; */
+	}
+}

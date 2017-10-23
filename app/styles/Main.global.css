@@ -1,0 +1,15 @@
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.main-container {
+  flex:3;
+  display:flex;
+}
+
+.main.dark-theme {
+  background: #3B4252;
+}
