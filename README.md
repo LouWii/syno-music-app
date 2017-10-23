@@ -20,6 +20,7 @@ Play all your tracks stored on your Synology NAS
 * Handle errors properly
 * Better component splitting
 * Better credentials storage
+* App icon
 * Tests
 
 # Dev
@@ -29,5 +30,7 @@ Clone the repository
 Run `yarn` (or `npm install`) ot install all dependencies.
 
 Run `npm run dev` to start the app with hot updates.
+
+Run `npm run package` to package the app for the local platform.
 
 [More info about Electron React Boilerplate](https://github.com/chentsulin/electron-react-boilerplate#install)
