@@ -1,8 +1,8 @@
 {
-  "name": "syno-down-app",
-  "productName": "electron-react-boilerplate",
-  "version": "1.0.0",
-  "description": "",
+  "name": "syno-music-app",
+  "productName": "Syno Music",
+  "version": "1.0.0-beta.1",
+  "description": "Play all the music stored on your Synology NAS.",
   "main": "./main.js",
   "author": {
     "name": "LouWii",
