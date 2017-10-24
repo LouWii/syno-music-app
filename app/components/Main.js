@@ -15,7 +15,7 @@ class Main extends Component {
         <div className="main-container">
           {React.cloneElement(this.props.children, this.props)}
         </div>
-        {this.props.player.songs.length > 0 &&
+        {this.props.player.songs && this.props.player.songs.length > 0 &&
           <Player
           playerPlayPause={this.props.playerPlayPause}
           playerPrevious={this.props.playerPrevious}
