@@ -9,6 +9,10 @@
     "email": "me@louwii.fr",
     "url": "https://github.com/louwii"
   },
+  "homepage": "https://github.com/LouWii/syno-music-app#readme",
+  "bugs": {
+    "url": "https://github.com/LouWii/syno-music-app/issues"
+  },
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^3.3.7",
