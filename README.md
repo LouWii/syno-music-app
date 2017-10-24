@@ -17,6 +17,7 @@ Play all your tracks stored on your Synology NAS
 
 * Improve stylesheets (use SASS)
 * Add new design(s)
+* Setup a proper song progress bar that's clickable
 * Handle errors properly
 * Better component splitting
 * Better credentials storage

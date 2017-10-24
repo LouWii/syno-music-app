@@ -82,9 +82,9 @@ app.on('ready', async () => {
 
   if (process.platform === 'darwin') {
     template = [{
-      label: 'Electron',
+      label: 'Syno Music',
       submenu: [{
-        label: 'About ElectronReact',
+        label: 'About Syno Music App',
         selector: 'orderFrontStandardAboutPanel:'
       }, {
         type: 'separator'
@@ -94,7 +94,7 @@ app.on('ready', async () => {
       }, {
         type: 'separator'
       }, {
-        label: 'Hide ElectronReact',
+        label: 'Hide Syno Music',
         accelerator: 'Command+H',
         selector: 'hide:'
       }, {
@@ -190,22 +190,17 @@ app.on('ready', async () => {
       submenu: [{
         label: 'Learn More',
         click() {
-          shell.openExternal('http://electron.atom.io');
+          shell.openExternal('https://github.com/LouWii/syno-music-app');
         }
       }, {
-        label: 'Documentation',
+        label: 'Report Bug',
         click() {
-          shell.openExternal('https://github.com/atom/electron/tree/master/docs#readme');
-        }
-      }, {
-        label: 'Community Discussions',
-        click() {
-          shell.openExternal('https://discuss.atom.io/c/electron');
+          shell.openExternal('https://github.com/LouWii/syno-music-app/issues/new');
         }
       }, {
         label: 'Search Issues',
         click() {
-          shell.openExternal('https://github.com/atom/electron/issues');
+          shell.openExternal('https://github.com/LouWii/syno-music-app/issues');
         }
       }]
     }];
@@ -257,22 +252,17 @@ app.on('ready', async () => {
       submenu: [{
         label: 'Learn More',
         click() {
-          shell.openExternal('http://electron.atom.io');
+          shell.openExternal('https://github.com/LouWii/syno-music-app');
         }
       }, {
-        label: 'Documentation',
+        label: 'Report Bug',
         click() {
-          shell.openExternal('https://github.com/atom/electron/tree/master/docs#readme');
-        }
-      }, {
-        label: 'Community Discussions',
-        click() {
-          shell.openExternal('https://discuss.atom.io/c/electron');
+          shell.openExternal('https://github.com/LouWii/syno-music-app/issues/new');
         }
       }, {
         label: 'Search Issues',
         click() {
-          shell.openExternal('https://github.com/atom/electron/issues');
+          shell.openExternal('https://github.com/LouWii/syno-music-app/issues');
         }
       }]
     }];

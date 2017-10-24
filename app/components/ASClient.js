@@ -41,6 +41,9 @@ class ASClient extends React.Component {
 
   handleArtistBack() {
     // TODO: shutdown player
+    this.props.playerPause()
+    this.props.setPlayerCurrentSong(null)
+    this.props.setPlayerSongs(null, null)
     hashHistory.goBack()
   }
 
