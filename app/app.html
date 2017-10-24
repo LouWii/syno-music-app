@@ -18,6 +18,11 @@
   <body style="-webkit-app-region: drag;">
     <div id="root"></div>
     <script>
+      // For easier styling depending on OS
+      const osString = process.platform;
+      const body = document.getElementsByTagName('body')[0];
+      body.classList.add(osString);
+
       {
         const script = document.createElement('script');
         const port = process.env.PORT || 3000;
