@@ -58,6 +58,11 @@
     color: rgba(206, 55, 150, 0.69);
 }
 
+.darwin .list-container header .list-subtitle {
+    padding-left: 70px;
+    padding-top: 2px;
+}
+
 .list-container header .list-title {
     padding: 0px 5px 5px;
     text-align: left;
