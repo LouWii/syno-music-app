@@ -2,7 +2,7 @@
 
 Play all your tracks stored on your Synology NAS 
 
-![screen shot 2017-10-23 at 9 00 46 pm](https://user-images.githubusercontent.com/2750789/31924352-53a6b5a6-b835-11e7-8fe2-0367db9b447b.png)
+![screen shot 2017-10-23 at 9 14 08 pm](https://user-images.githubusercontent.com/2750789/31924554-34c6f7b6-b837-11e7-8498-d03b1b922128.png)
 
 (your music must be all stored in AudioStation)
 
