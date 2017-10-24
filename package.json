@@ -62,7 +62,8 @@
       "target": [
         "deb",
         "AppImage"
-      ]
+      ],
+      "category": "Audio"
     },
     "directories": {
       "buildResources": "resources",
