@@ -86,6 +86,9 @@
 
 .artists-list-container {
     z-index: 10;
+}
+
+.darwin .artists-list-container {
     top: 12px;
 }
 

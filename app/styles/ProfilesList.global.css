@@ -1,10 +1,14 @@
 .profiles-list {
-  padding: 12px 25px 0;
+  padding: 0 25px;
   width: 100%;
   background: #1d1c1e;
 
   user-select: none;
   cursor: default;
+}
+
+.darwin .profiles-list {
+  padding-top: 12px;
 }
 
 .profiles-list h2 {
