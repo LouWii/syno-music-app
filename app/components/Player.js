@@ -11,9 +11,10 @@ class Player extends React.Component {
     this.handleNextClick = this.handleNextClick.bind(this)
     this.handlePrevClick = this.handlePrevClick.bind(this)
 
-    const songUrl = ''
-    const currentSongTime = 0
-    this.state = {songUrl, currentSongTime}
+    const songUrl = '',
+      currentSongTime = 0,
+      playerIntervalId= null
+    this.state = {songUrl, currentSongTime, playerIntervalId}
   }
 
   componentDidMount() {
@@ -28,9 +29,14 @@ class Player extends React.Component {
         // TODO : Stop the player
       }
     });
-    setInterval(function() {
+    const intervalId = setInterval(function() {
       _this.setState({currentSongTime: audio.currentTime})
     }, 100)
+    this.setState({playerIntervalId: intervalId})
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.playerIntervalId)
   }
 
   componentDidUpdate(prevProps, prevState) {
