@@ -1,7 +1,7 @@
 {
   "name": "syno-music-app",
   "productName": "Syno Music",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Play all the music stored on your Synology NAS.",
   "main": "./main.js",
   "author": {
