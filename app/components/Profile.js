@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import '../styles/Profile.global.css'
+import '../styles/Profile.global.scss'
 
 export default class Profile extends Component {
   constructor(props) {
