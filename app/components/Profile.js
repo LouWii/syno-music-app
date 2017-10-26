@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
-import '../styles/Profile.global.css';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import '../styles/Profile.global.css'
 
-class Profile extends Component {
+export default class Profile extends Component {
   constructor(props) {
     super(props)
     this.handleDelete = this.handleDelete.bind(this)
@@ -38,5 +38,3 @@ Profile.propTypes = {
     password: React.PropTypes.string,
   }),
 }
-
-export default Profile
