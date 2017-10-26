@@ -2,7 +2,7 @@ import React from 'react'
 import SongsList from './SongsList'
 import LoadingStatus from './LoadingStatus'
 import { hashHistory } from 'react-router'
-import '../styles/ASClient.global.css'
+import '../styles/ASClient.global.scss'
 
 export default class ASClient extends React.Component {
   constructor(props) {
@@ -119,7 +119,7 @@ export default class ASClient extends React.Component {
             }
             <ul className="artists-list">
               {this.props.client.artists && this.props.client.artists.map(function(element, idx) {
-                if(element.name !== '') return <li key={idx} ><button onClick={this.handleArtistClick} data-idx={idx}>{element.name}</button></li>
+                if(element.name !== '') return <li className="list-item" key={idx} ><button onClick={this.handleArtistClick} data-idx={idx}>{element.name}</button></li>
               }, this)}
             </ul>
           </div>
