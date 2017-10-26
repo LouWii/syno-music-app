@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import Profile from './Profile'
 import '../styles/ProfilesList.global.css';
 
-class ProfilesList extends React.Component {
+export default class ProfilesList extends React.Component {
 
   componentDidMount() {
     this.props.clearSelectedClientProfile()
@@ -36,5 +36,3 @@ class ProfilesList extends React.Component {
 ProfilesList.propTypes = {
   profiles: React.PropTypes.arrayOf(React.PropTypes.object)
 }
-
-export default ProfilesList;
