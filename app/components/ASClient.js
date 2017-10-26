@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import SongsList from './SongsList'
 import LoadingStatus from './LoadingStatus'
 import { hashHistory } from 'react-router'
 import '../styles/ASClient.global.css'
 
-class ASClient extends React.Component {
+export default class ASClient extends React.Component {
   constructor(props) {
     super(props)
 
@@ -15,7 +15,7 @@ class ASClient extends React.Component {
     this.handlePlaySong = this.handlePlaySong.bind(this)
     this.handleSongBack = this.handleSongBack.bind(this)
 
-    const { idx } = this.props.params;
+    const { idx } = this.props.match.params;
     const profile = this.props.profiles[idx];
     const selectedArtist = null
     const selectedArtistName = null
@@ -44,7 +44,7 @@ class ASClient extends React.Component {
     this.props.playerPause()
     this.props.setPlayerCurrentSong(null)
     this.props.setPlayerSongs(null, null)
-    hashHistory.goBack()
+    this.props.history.goBack()
   }
 
   handleAlbumClick(event) {
@@ -174,5 +174,3 @@ class ASClient extends React.Component {
     )
   }
 }
-
-export default ASClient
