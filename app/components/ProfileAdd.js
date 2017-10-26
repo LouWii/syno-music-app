@@ -1,8 +1,7 @@
 import React from 'react';
-import { hashHistory } from 'react-router'
 import styles from '../styles/ProfileAdd.global.css'
 
-class ProfileAdd extends React.Component {
+export default class ProfileAdd extends React.Component {
   constructor(props) {
     super(props)
     this.handleCancel = this.handleCancel.bind(this)
@@ -11,13 +10,13 @@ class ProfileAdd extends React.Component {
 
   handleCancel(e) {
     this.refs.profileAdd.reset()
-    hashHistory.goBack()
+    this.props.history.goBack()
   }
 
   handleSave(e) {
     e.preventDefault()
     this.props.addProfile(this.refs.profileName.value, this.refs.profileUrl.value, this.refs.profilePort.value, this.refs.profileLogin.value, this.refs.profilePassword.value)
-    hashHistory.push('/')
+    this.props.history.push('/')
   }
 
   render() {
@@ -54,9 +53,3 @@ class ProfileAdd extends React.Component {
     );
   }
 }
-
-ProfileAdd.propTypes = {
-
-}
-
-export default ProfileAdd;
