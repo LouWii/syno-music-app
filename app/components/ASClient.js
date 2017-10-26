@@ -140,7 +140,7 @@ export default class ASClient extends React.Component {
             }
             <ul className="albums-list">
               {artistHasAlbums && this.props.client.albums[this.state.selectedArtistName].map(function(element, idx){
-                return <li key={idx}><button onClick={this.handleAlbumClick} data-idx={idx}>{element.name}</button></li>
+                return <li className="list-item" key={idx}><button onClick={this.handleAlbumClick} data-idx={idx}>{element.name}</button></li>
               }, this)}
             </ul>
           </div>
