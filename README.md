@@ -21,6 +21,8 @@ Play all your tracks stored on your Synology NAS
 * Handle errors properly
 * Better component splitting
 * Better credentials storage
+* Split actions into separate files
+* Use constants for actions types
 * App icon
 * Tests
 
