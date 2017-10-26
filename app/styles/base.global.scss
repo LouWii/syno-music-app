@@ -1,0 +1,32 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~source-sans-pro/source-sans-pro.css";
+@import "~fonts-raleway/css/raleway.css";
+
+button, input, label {
+  -webkit-app-region: no-drag;
+}
+
+button, button:active, button:focus {
+  outline: none;
+}
+
+label {
+  user-select: none;
+  cursor: default;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+}
+
+.btn-no-background {
+  border: 0;
+  background: transparent;
+}
