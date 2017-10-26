@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import type { Children } from 'react'
 import PlayerContainer from './PlayerContainer'
 
-import '../styles/Main.global.css';
+import '../styles/App.global.scss';
 
 export default class App extends Component {
   props: {
