@@ -1,0 +1,149 @@
+.songs-list {
+    width: 100%;
+
+    tr:hover {
+        background-color: rgba(255, 255, 255, .02);
+    }
+
+    td {
+        padding: 3px 0;
+    }
+
+    .current-song {
+        font-weight: bold;
+    }
+
+    .play-cell {
+        width: 45px;
+
+        button {
+            background: none;
+            border: 0;
+            padding-left: 15px;
+            color: #9a0b8f;
+
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    .title-cell {
+        font-family: 'Raleway', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 500
+    }
+
+    .duration-cell {
+        width: 70px;
+        text-align: right;
+        font-family: 'Source Sans Pro', sans-serif;
+        padding: 0 10px;
+        color: rgba(255, 255, 255, .2);
+        font-weight: 300;
+    }
+}
+
+.song-playing-icon {
+    position: relative;
+    margin: 0 auto;
+    height: 15px;
+    vertical-align: bottom;
+
+    &.paused .bar {
+        animation: none;
+        height: 2px;
+    }
+
+    .bar {
+        height: 4px;
+        width: 3px;
+        margin-right: 2px;
+        border-radius: 3px;
+        background: #da2a5e;
+        display: inline-block;
+        animation: load 2s ease-in-out infinite;
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+    }
+
+    .bar-two {
+        animation-delay: 0.1s;
+        animation: load2 2s ease-in-out infinite;
+        left: 20px;
+    }
+
+    .bar-three {
+        animation-delay: 0.6s;
+        left: 25px;
+    }
+}
+
+@keyframes load {
+    0%,
+    100% {
+        /* transform: scaleY(1); */
+        /* background: #03A9F4; */
+        height: 13px;
+    }
+    16.67% {
+        /* transform: scaleY(1.4); */
+        /* background: #FF5722; */
+        height: 10px;
+    }
+    33.33% {
+        /* transform: scaleY(1); */
+        /* background: #FF5252; */
+        height: 12px;
+    }
+    50% {
+        /* transform: scaleY(1.6); */
+        /* background: #E91E63; */
+        height: 7px;
+    }
+    66.67% {
+        /* transform: scaleY(1); */
+        /* background: #9C27B0; */
+        height: 11px;
+    }
+    83.34% {
+        /* transform: scaleY(1.5); */
+        /* background: #673AB7; */
+        height: 7px;
+    }
+}
+
+@keyframes load2 {
+    0%,
+    100% {
+        /* transform: scaleY(1); */
+        /* background: #03A9F4; */
+        height: 15px;
+    }
+    16.67% {
+        /* transform: scaleY(1.8); */
+        /* background: #FF5722; */
+        height: 8px;
+    }
+    33.33% {
+        /* transform: scaleY(1); */
+        /* background: #FF5252; */
+        height: 13px;
+    }
+    50% {
+        /* transform: scaleY(1.5); */
+        /* background: #E91E63; */
+        height: 15px;
+    }
+    66.67% {
+        /* transform: scaleY(1); */
+        /* background: #9C27B0; */
+        height: 6px;
+    }
+    83.34% {
+        /* transform: scaleY(1.2); */
+        /* background: #673AB7; */
+        height: 11px;
+    }
+}

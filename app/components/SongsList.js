@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import {getHumanDuration} from '../utils/utils'
-import '../styles/SongsList.global.css'
+import '../styles/SongsList.global.scss'
 
-class SongsList extends React.Component {
+export default class SongsList extends React.Component {
   constructor(props) {
     super(props)
 
@@ -43,5 +43,3 @@ class SongsList extends React.Component {
     )
   }
 }
-
-export default SongsList
