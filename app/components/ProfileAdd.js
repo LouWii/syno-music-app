@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from '../styles/ProfileAdd.global.css'
+import React from 'react'
+import styles from '../styles/ProfileAdd.global.scss'
 
 export default class ProfileAdd extends React.Component {
   constructor(props) {
