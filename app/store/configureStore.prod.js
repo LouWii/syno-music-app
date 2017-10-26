@@ -1,15 +1,11 @@
 // @flow
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { hashHistory } from 'react-router';
+import { createBrowserHistory } from 'history';
 import { routerMiddleware } from 'react-router-redux';
 import rootReducer from '../reducers';
 
 const stateStorageKey = 'syno-music-app'
-
-const router = routerMiddleware(hashHistory);
-
-const enhancer = applyMiddleware(thunk, router);
 
 const defaultState = {
   profiles: [],
@@ -41,18 +37,13 @@ const defaultState = {
 
 const persistedState = localStorage.getItem(stateStorageKey) ? JSON.parse(localStorage.getItem(stateStorageKey)) : defaultState
 
-export default function configureStore(initialState) {
+const history = createBrowserHistory();
+const router = routerMiddleware(history);
+const enhancer = applyMiddleware(thunk, router);
+
+function configureStore(initialState) {
   const storeInitialState = initialState ? initialState : { ...defaultState, profiles: persistedState.profiles }
-  return createStore(rootReducer, storeInitialState, enhancer); // eslint-disable-line
+  return createStore(rootReducer, storeInitialState, enhancer);
 }
 
-export const saveState = (state) => {
-  try {
-    // TODO : Choose what to store in localStorage
-    const serializedState = JSON.stringify({profiles: state.profiles})
-    localStorage.setItem(stateStorageKey, serializedState)
-  } catch (err) {
-    // Ignore write errors.
-	console.error(err)
-  }
-}
+export default { configureStore, history };
