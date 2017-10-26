@@ -1,0 +1,120 @@
+.player {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 12px 10px 5px;
+    background: linear-gradient(45deg, #151212 0%,#282a2f 100%);
+    background: #222326;
+    border-top: 1px solid #efefef;
+    border-image: linear-gradient(to right, rgba(18,110,205,1) 0%, rgba(199,20,0,1) 100%);
+    border-image-slice: 1;
+
+    .controls {
+        text-align: center;
+
+        button {
+            background: none;
+            border: 0;
+        }
+
+        .btn-play {
+            width: 40px;
+            height: 40px;
+            /* border: 1px solid #1272d6; */
+            border-radius: 50%;
+            /* border-image: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(199,20,0,1) 100%); */
+            /* border-image-slice: 1; */
+            color: #a0a0a0;
+            background: linear-gradient(45deg, rgba(137,7,197,1) 0%, rgba(199,20,0,1) 100%);
+            transition: box-shadow .25s;
+
+            &:active {
+                transform: scale(0.9);
+            }
+
+            &:hover {
+                box-shadow: 0px 0px 3px #a351a9;
+
+                .glyphicon {
+                    transition: transform .25s;
+                    transform: scale(1.07);
+                }
+            }
+        }
+
+        & .btn-previous, & .btn-next {
+            color: #9c0b8a;
+            transition: text-shadow .25s;
+
+            &:active {
+                text-shadow: none;
+                transform: scale(0.9);
+            }
+
+            &:hover {
+                text-shadow: 0px 0px 3px #a351a9;
+            }
+        }
+    }
+
+    .playing-song {
+        margin-top: 8px;
+        text-align: center;
+        color: #a02262;
+        font-family: 'Raleway', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        user-select: none;
+        cursor: default;
+
+        .song-name {
+            font-weight: 800;
+        }
+
+        .song-artist {
+            font-weight: 500;
+        }
+    }
+
+    .song-progress {
+        display: flex;
+        user-select: none;
+        cursor: default;
+
+        .song-timebar {
+            flex: 2;
+            position: relative;
+
+            & .timebar-background, & .timebar {
+                height: 2px;
+                min-width: calc(100% - 16px);
+                position: absolute;
+                top: 9px;
+                left: 8px;
+            }
+
+            .timebar-background span {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+            .timebar span {
+                display: block;
+                width: 0;
+                height: 100%;
+                background: linear-gradient(to right, rgba(18,110,205,1) 0%, rgba(199,20,0,1) 100%);
+            }
+        }
+
+        .song-current-time {
+            color: #126dcc;
+        }
+
+        .song-total-time {
+            color: rgba(18, 109, 204, 0.47);
+        }
+    }
+}

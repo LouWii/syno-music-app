@@ -1,7 +1,7 @@
 import React from 'react'
 import { as } from '../utils/syno-api'
 import {getHumanDuration} from '../utils/utils'
-import '../styles/Player.global.css'
+import '../styles/Player.global.scss'
 
 export default class Player extends React.Component {
   constructor(props) {
