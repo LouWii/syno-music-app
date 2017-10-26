@@ -20,12 +20,6 @@
     right: 0;
     bottom: 0;
     overflow-y: auto;
-    /* background: #434C5E; */
-    /* from #171C27 to #202837 */
-    background: linear-gradient(45deg, #171C27 0%,#212939 100%);
-    background: linear-gradient(45deg, #232833 0%,#0d131f 100%);
-    background: #1d1c1e;
-    /* background: #1E1E1E; */
 
     &::-webkit-scrollbar-track
     {
