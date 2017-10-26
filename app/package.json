@@ -3,7 +3,7 @@
   "productName": "Syno Music",
   "version": "1.0.0-beta.2",
   "description": "Play all the music stored on your Synology NAS.",
-  "main": "./main.js",
+  "main": "./main.prod.js",
   "author": {
     "name": "LouWii",
     "email": "me@louwii.fr",
@@ -12,6 +12,9 @@
   "homepage": "https://github.com/LouWii/syno-music-app#readme",
   "bugs": {
     "url": "https://github.com/LouWii/syno-music-app/issues"
+  },
+  "scripts": {
+    "postinstall": "npm rebuild --runtime=electron --target=1.6.6 --disturl=https://atom.io/download/atom-shell --build-from-source"
   },
   "license": "MIT",
   "dependencies": {
