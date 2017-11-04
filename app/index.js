@@ -3,9 +3,14 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Root from './containers/Root';
 import { configureStore, history } from './store/configureStore';
+import { saveStateToLocalStorage } from './utils/localStorage'
 import './styles/base.global.scss';
 
 const store = configureStore();
+
+store.subscribe(() => {
+  saveStateToLocalStorage(store.getState())
+});
 
 render(
   <AppContainer>
