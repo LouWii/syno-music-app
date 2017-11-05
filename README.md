@@ -31,7 +31,7 @@ Play all your tracks stored on your Synology NAS
 
 Clone the repository
 
-Run `yarn` (or `npm install`) ot install all dependencies.
+Run `yarn` (or `npm install`) to install all dependencies.
 
 Run `yarn run dev` to start the app with hot updates.
 
