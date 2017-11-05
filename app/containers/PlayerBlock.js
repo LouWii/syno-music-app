@@ -1,7 +1,7 @@
 import React from 'react'
 import Player from '../components/Player'
 
-export default class PlayerBlock extends React.Component {
+class PlayerBlock extends React.Component {
 
   render() {
     return (
@@ -19,3 +19,5 @@ export default class PlayerBlock extends React.Component {
     )
   }
 }
+
+export default PlayerBlock
