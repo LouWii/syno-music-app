@@ -2,3 +2,14 @@
 # yarn lockfile v1
 
 
+bootstrap@^3.3.7:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.3.7.tgz#5a389394549f23330875a3b150656574f8a9eb71"
+
+fonts-raleway@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/fonts-raleway/-/fonts-raleway-0.0.4.tgz#d832720768487f8cc6d78495095c6cdb032b1428"
+
+source-sans-pro@^2.0.10:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/source-sans-pro/-/source-sans-pro-2.0.10.tgz#c1ca859cf164a088944c5e83745085e87cd533a9"
