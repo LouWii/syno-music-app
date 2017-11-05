@@ -33,7 +33,6 @@
   "build": {
     "productName": "Syno Music",
     "appId": "org.louwii.SynoMusic",
-    "category": "public.app-category.music",
     "files": [
       "dist/",
       "node_modules/",
@@ -42,6 +41,9 @@
       "main.prod.js.map",
       "package.json"
     ],
+    "mac": {
+      "category": "public.app-category.music"
+    },
     "dmg": {
       "contents": [
         {
