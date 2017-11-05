@@ -32,8 +32,8 @@ Clone the repository
 
 Run `yarn` (or `npm install`) ot install all dependencies.
 
-Run `npm run dev` to start the app with hot updates.
+Run `yarn run dev` to start the app with hot updates.
 
-Run `npm run package` to package the app for the local platform.
+Run `yarn run package` to package the app for the local platform.
 
 [More info about Electron React Boilerplate](https://github.com/chentsulin/electron-react-boilerplate#install)
