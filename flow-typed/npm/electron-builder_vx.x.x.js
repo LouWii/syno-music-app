@@ -1,4 +1,4 @@
-// flow-typed signature: 1ba26906c3f876c048209fa11456b91a
+// flow-typed signature: 799a3d01a2cd7e3ff62b8893e31423c9
 // flow-typed version: <<STUB>>/electron-builder_v^19.8.0/flow_v0.48.0
 
 /**
@@ -26,19 +26,7 @@ declare module 'electron-builder/out/appInfo' {
   declare module.exports: any;
 }
 
-declare module 'electron-builder/out/asar/asar' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/asar/asarFileChecker' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/asar/asarUtil' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/asar/unpackDetector' {
+declare module 'electron-builder/out/asar' {
   declare module.exports: any;
 }
 
@@ -58,15 +46,7 @@ declare module 'electron-builder/out/cli/install-app-deps' {
   declare module.exports: any;
 }
 
-declare module 'electron-builder/out/cli/start' {
-  declare module.exports: any;
-}
-
 declare module 'electron-builder/out/codeSign' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/configuration' {
   declare module.exports: any;
 }
 
@@ -102,15 +82,7 @@ declare module 'electron-builder/out/macPackager' {
   declare module.exports: any;
 }
 
-declare module 'electron-builder/out/options/AppXOptions' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/options/CommonWindowsInstallerOptions' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/options/FileAssociation' {
+declare module 'electron-builder/out/metadata' {
   declare module.exports: any;
 }
 
@@ -119,26 +91,6 @@ declare module 'electron-builder/out/options/linuxOptions' {
 }
 
 declare module 'electron-builder/out/options/macOptions' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/options/metadata' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/options/MsiOptions' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/options/PlatformSpecificBuildOptions' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/options/SnapOptions' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/options/SquirrelWindowsOptions' {
   declare module.exports: any;
 }
 
@@ -174,15 +126,11 @@ declare module 'electron-builder/out/publish/PublishManager' {
   declare module.exports: any;
 }
 
-declare module 'electron-builder/out/publish/updateUnfoBuilder' {
-  declare module.exports: any;
-}
-
 declare module 'electron-builder/out/targets/appImage' {
   declare module.exports: any;
 }
 
-declare module 'electron-builder/out/targets/AppxTarget' {
+declare module 'electron-builder/out/targets/appx' {
   declare module.exports: any;
 }
 
@@ -194,7 +142,15 @@ declare module 'electron-builder/out/targets/ArchiveTarget' {
   declare module.exports: any;
 }
 
+declare module 'electron-builder/out/targets/blockMap' {
+  declare module.exports: any;
+}
+
 declare module 'electron-builder/out/targets/dmg' {
+  declare module.exports: any;
+}
+
+declare module 'electron-builder/out/targets/dmgLicense' {
   declare module.exports: any;
 }
 
@@ -202,39 +158,15 @@ declare module 'electron-builder/out/targets/fpm' {
   declare module.exports: any;
 }
 
+declare module 'electron-builder/out/targets/license' {
+  declare module.exports: any;
+}
+
 declare module 'electron-builder/out/targets/LinuxTargetHelper' {
   declare module.exports: any;
 }
 
-declare module 'electron-builder/out/targets/MsiTarget' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/targets/nsis/nsis' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/targets/nsis/nsisLang' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/targets/nsis/nsisLicense' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/targets/nsis/nsisOptions' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/targets/nsis/nsisScriptGenerator' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/targets/nsis/nsisUtil' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/targets/nsis/WebInstallerTarget' {
+declare module 'electron-builder/out/targets/nsis' {
   declare module.exports: any;
 }
 
@@ -250,19 +182,15 @@ declare module 'electron-builder/out/targets/targetFactory' {
   declare module.exports: any;
 }
 
-declare module 'electron-builder/out/targets/targetUtil' {
+declare module 'electron-builder/out/targets/WebInstallerTarget' {
   declare module.exports: any;
 }
 
-declare module 'electron-builder/out/util/appFileCopier' {
+declare module 'electron-builder/out/util/asarUtil' {
   declare module.exports: any;
 }
 
-declare module 'electron-builder/out/util/AppFileCopierHelper' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/util/AppFileWalker' {
+declare module 'electron-builder/out/util/bundledTool' {
   declare module.exports: any;
 }
 
@@ -274,10 +202,6 @@ declare module 'electron-builder/out/util/config' {
   declare module.exports: any;
 }
 
-declare module 'electron-builder/out/util/electronVersion' {
-  declare module.exports: any;
-}
-
 declare module 'electron-builder/out/util/filter' {
   declare module.exports: any;
 }
@@ -286,7 +210,7 @@ declare module 'electron-builder/out/util/flags' {
   declare module.exports: any;
 }
 
-declare module 'electron-builder/out/util/NodeModuleCopyHelper' {
+declare module 'electron-builder/out/util/macosVersion' {
   declare module.exports: any;
 }
 
@@ -298,10 +222,6 @@ declare module 'electron-builder/out/util/packageMetadata' {
   declare module.exports: any;
 }
 
-declare module 'electron-builder/out/util/pathManager' {
-  declare module.exports: any;
-}
-
 declare module 'electron-builder/out/util/repositoryInfo' {
   declare module.exports: any;
 }
@@ -310,23 +230,11 @@ declare module 'electron-builder/out/util/timer' {
   declare module.exports: any;
 }
 
+declare module 'electron-builder/out/util/wine' {
+  declare module.exports: any;
+}
+
 declare module 'electron-builder/out/util/yarn' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/vm/mono' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/vm/parallels' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/vm/vm' {
-  declare module.exports: any;
-}
-
-declare module 'electron-builder/out/vm/wine' {
   declare module.exports: any;
 }
 
@@ -342,17 +250,8 @@ declare module 'electron-builder/out/winPackager' {
 declare module 'electron-builder/out/appInfo.js' {
   declare module.exports: $Exports<'electron-builder/out/appInfo'>;
 }
-declare module 'electron-builder/out/asar/asar.js' {
-  declare module.exports: $Exports<'electron-builder/out/asar/asar'>;
-}
-declare module 'electron-builder/out/asar/asarFileChecker.js' {
-  declare module.exports: $Exports<'electron-builder/out/asar/asarFileChecker'>;
-}
-declare module 'electron-builder/out/asar/asarUtil.js' {
-  declare module.exports: $Exports<'electron-builder/out/asar/asarUtil'>;
-}
-declare module 'electron-builder/out/asar/unpackDetector.js' {
-  declare module.exports: $Exports<'electron-builder/out/asar/unpackDetector'>;
+declare module 'electron-builder/out/asar.js' {
+  declare module.exports: $Exports<'electron-builder/out/asar'>;
 }
 declare module 'electron-builder/out/builder.js' {
   declare module.exports: $Exports<'electron-builder/out/builder'>;
@@ -366,14 +265,8 @@ declare module 'electron-builder/out/cli/create-self-signed-cert.js' {
 declare module 'electron-builder/out/cli/install-app-deps.js' {
   declare module.exports: $Exports<'electron-builder/out/cli/install-app-deps'>;
 }
-declare module 'electron-builder/out/cli/start.js' {
-  declare module.exports: $Exports<'electron-builder/out/cli/start'>;
-}
 declare module 'electron-builder/out/codeSign.js' {
   declare module.exports: $Exports<'electron-builder/out/codeSign'>;
-}
-declare module 'electron-builder/out/configuration.js' {
-  declare module.exports: $Exports<'electron-builder/out/configuration'>;
 }
 declare module 'electron-builder/out/core.js' {
   declare module.exports: $Exports<'electron-builder/out/core'>;
@@ -399,35 +292,14 @@ declare module 'electron-builder/out/linuxPackager.js' {
 declare module 'electron-builder/out/macPackager.js' {
   declare module.exports: $Exports<'electron-builder/out/macPackager'>;
 }
-declare module 'electron-builder/out/options/AppXOptions.js' {
-  declare module.exports: $Exports<'electron-builder/out/options/AppXOptions'>;
-}
-declare module 'electron-builder/out/options/CommonWindowsInstallerOptions.js' {
-  declare module.exports: $Exports<'electron-builder/out/options/CommonWindowsInstallerOptions'>;
-}
-declare module 'electron-builder/out/options/FileAssociation.js' {
-  declare module.exports: $Exports<'electron-builder/out/options/FileAssociation'>;
+declare module 'electron-builder/out/metadata.js' {
+  declare module.exports: $Exports<'electron-builder/out/metadata'>;
 }
 declare module 'electron-builder/out/options/linuxOptions.js' {
   declare module.exports: $Exports<'electron-builder/out/options/linuxOptions'>;
 }
 declare module 'electron-builder/out/options/macOptions.js' {
   declare module.exports: $Exports<'electron-builder/out/options/macOptions'>;
-}
-declare module 'electron-builder/out/options/metadata.js' {
-  declare module.exports: $Exports<'electron-builder/out/options/metadata'>;
-}
-declare module 'electron-builder/out/options/MsiOptions.js' {
-  declare module.exports: $Exports<'electron-builder/out/options/MsiOptions'>;
-}
-declare module 'electron-builder/out/options/PlatformSpecificBuildOptions.js' {
-  declare module.exports: $Exports<'electron-builder/out/options/PlatformSpecificBuildOptions'>;
-}
-declare module 'electron-builder/out/options/SnapOptions.js' {
-  declare module.exports: $Exports<'electron-builder/out/options/SnapOptions'>;
-}
-declare module 'electron-builder/out/options/SquirrelWindowsOptions.js' {
-  declare module.exports: $Exports<'electron-builder/out/options/SquirrelWindowsOptions'>;
 }
 declare module 'electron-builder/out/options/winOptions.js' {
   declare module.exports: $Exports<'electron-builder/out/options/winOptions'>;
@@ -453,14 +325,11 @@ declare module 'electron-builder/out/presets/rectCra.js' {
 declare module 'electron-builder/out/publish/PublishManager.js' {
   declare module.exports: $Exports<'electron-builder/out/publish/PublishManager'>;
 }
-declare module 'electron-builder/out/publish/updateUnfoBuilder.js' {
-  declare module.exports: $Exports<'electron-builder/out/publish/updateUnfoBuilder'>;
-}
 declare module 'electron-builder/out/targets/appImage.js' {
   declare module.exports: $Exports<'electron-builder/out/targets/appImage'>;
 }
-declare module 'electron-builder/out/targets/AppxTarget.js' {
-  declare module.exports: $Exports<'electron-builder/out/targets/AppxTarget'>;
+declare module 'electron-builder/out/targets/appx.js' {
+  declare module.exports: $Exports<'electron-builder/out/targets/appx'>;
 }
 declare module 'electron-builder/out/targets/archive.js' {
   declare module.exports: $Exports<'electron-builder/out/targets/archive'>;
@@ -468,38 +337,26 @@ declare module 'electron-builder/out/targets/archive.js' {
 declare module 'electron-builder/out/targets/ArchiveTarget.js' {
   declare module.exports: $Exports<'electron-builder/out/targets/ArchiveTarget'>;
 }
+declare module 'electron-builder/out/targets/blockMap.js' {
+  declare module.exports: $Exports<'electron-builder/out/targets/blockMap'>;
+}
 declare module 'electron-builder/out/targets/dmg.js' {
   declare module.exports: $Exports<'electron-builder/out/targets/dmg'>;
+}
+declare module 'electron-builder/out/targets/dmgLicense.js' {
+  declare module.exports: $Exports<'electron-builder/out/targets/dmgLicense'>;
 }
 declare module 'electron-builder/out/targets/fpm.js' {
   declare module.exports: $Exports<'electron-builder/out/targets/fpm'>;
 }
+declare module 'electron-builder/out/targets/license.js' {
+  declare module.exports: $Exports<'electron-builder/out/targets/license'>;
+}
 declare module 'electron-builder/out/targets/LinuxTargetHelper.js' {
   declare module.exports: $Exports<'electron-builder/out/targets/LinuxTargetHelper'>;
 }
-declare module 'electron-builder/out/targets/MsiTarget.js' {
-  declare module.exports: $Exports<'electron-builder/out/targets/MsiTarget'>;
-}
-declare module 'electron-builder/out/targets/nsis/nsis.js' {
-  declare module.exports: $Exports<'electron-builder/out/targets/nsis/nsis'>;
-}
-declare module 'electron-builder/out/targets/nsis/nsisLang.js' {
-  declare module.exports: $Exports<'electron-builder/out/targets/nsis/nsisLang'>;
-}
-declare module 'electron-builder/out/targets/nsis/nsisLicense.js' {
-  declare module.exports: $Exports<'electron-builder/out/targets/nsis/nsisLicense'>;
-}
-declare module 'electron-builder/out/targets/nsis/nsisOptions.js' {
-  declare module.exports: $Exports<'electron-builder/out/targets/nsis/nsisOptions'>;
-}
-declare module 'electron-builder/out/targets/nsis/nsisScriptGenerator.js' {
-  declare module.exports: $Exports<'electron-builder/out/targets/nsis/nsisScriptGenerator'>;
-}
-declare module 'electron-builder/out/targets/nsis/nsisUtil.js' {
-  declare module.exports: $Exports<'electron-builder/out/targets/nsis/nsisUtil'>;
-}
-declare module 'electron-builder/out/targets/nsis/WebInstallerTarget.js' {
-  declare module.exports: $Exports<'electron-builder/out/targets/nsis/WebInstallerTarget'>;
+declare module 'electron-builder/out/targets/nsis.js' {
+  declare module.exports: $Exports<'electron-builder/out/targets/nsis'>;
 }
 declare module 'electron-builder/out/targets/pkg.js' {
   declare module.exports: $Exports<'electron-builder/out/targets/pkg'>;
@@ -510,17 +367,14 @@ declare module 'electron-builder/out/targets/snap.js' {
 declare module 'electron-builder/out/targets/targetFactory.js' {
   declare module.exports: $Exports<'electron-builder/out/targets/targetFactory'>;
 }
-declare module 'electron-builder/out/targets/targetUtil.js' {
-  declare module.exports: $Exports<'electron-builder/out/targets/targetUtil'>;
+declare module 'electron-builder/out/targets/WebInstallerTarget.js' {
+  declare module.exports: $Exports<'electron-builder/out/targets/WebInstallerTarget'>;
 }
-declare module 'electron-builder/out/util/appFileCopier.js' {
-  declare module.exports: $Exports<'electron-builder/out/util/appFileCopier'>;
+declare module 'electron-builder/out/util/asarUtil.js' {
+  declare module.exports: $Exports<'electron-builder/out/util/asarUtil'>;
 }
-declare module 'electron-builder/out/util/AppFileCopierHelper.js' {
-  declare module.exports: $Exports<'electron-builder/out/util/AppFileCopierHelper'>;
-}
-declare module 'electron-builder/out/util/AppFileWalker.js' {
-  declare module.exports: $Exports<'electron-builder/out/util/AppFileWalker'>;
+declare module 'electron-builder/out/util/bundledTool.js' {
+  declare module.exports: $Exports<'electron-builder/out/util/bundledTool'>;
 }
 declare module 'electron-builder/out/util/cacheManager.js' {
   declare module.exports: $Exports<'electron-builder/out/util/cacheManager'>;
@@ -528,17 +382,14 @@ declare module 'electron-builder/out/util/cacheManager.js' {
 declare module 'electron-builder/out/util/config.js' {
   declare module.exports: $Exports<'electron-builder/out/util/config'>;
 }
-declare module 'electron-builder/out/util/electronVersion.js' {
-  declare module.exports: $Exports<'electron-builder/out/util/electronVersion'>;
-}
 declare module 'electron-builder/out/util/filter.js' {
   declare module.exports: $Exports<'electron-builder/out/util/filter'>;
 }
 declare module 'electron-builder/out/util/flags.js' {
   declare module.exports: $Exports<'electron-builder/out/util/flags'>;
 }
-declare module 'electron-builder/out/util/NodeModuleCopyHelper.js' {
-  declare module.exports: $Exports<'electron-builder/out/util/NodeModuleCopyHelper'>;
+declare module 'electron-builder/out/util/macosVersion.js' {
+  declare module.exports: $Exports<'electron-builder/out/util/macosVersion'>;
 }
 declare module 'electron-builder/out/util/packageDependencies.js' {
   declare module.exports: $Exports<'electron-builder/out/util/packageDependencies'>;
@@ -546,29 +397,17 @@ declare module 'electron-builder/out/util/packageDependencies.js' {
 declare module 'electron-builder/out/util/packageMetadata.js' {
   declare module.exports: $Exports<'electron-builder/out/util/packageMetadata'>;
 }
-declare module 'electron-builder/out/util/pathManager.js' {
-  declare module.exports: $Exports<'electron-builder/out/util/pathManager'>;
-}
 declare module 'electron-builder/out/util/repositoryInfo.js' {
   declare module.exports: $Exports<'electron-builder/out/util/repositoryInfo'>;
 }
 declare module 'electron-builder/out/util/timer.js' {
   declare module.exports: $Exports<'electron-builder/out/util/timer'>;
 }
+declare module 'electron-builder/out/util/wine.js' {
+  declare module.exports: $Exports<'electron-builder/out/util/wine'>;
+}
 declare module 'electron-builder/out/util/yarn.js' {
   declare module.exports: $Exports<'electron-builder/out/util/yarn'>;
-}
-declare module 'electron-builder/out/vm/mono.js' {
-  declare module.exports: $Exports<'electron-builder/out/vm/mono'>;
-}
-declare module 'electron-builder/out/vm/parallels.js' {
-  declare module.exports: $Exports<'electron-builder/out/vm/parallels'>;
-}
-declare module 'electron-builder/out/vm/vm.js' {
-  declare module.exports: $Exports<'electron-builder/out/vm/vm'>;
-}
-declare module 'electron-builder/out/vm/wine.js' {
-  declare module.exports: $Exports<'electron-builder/out/vm/wine'>;
 }
 declare module 'electron-builder/out/windowsCodeSign.js' {
   declare module.exports: $Exports<'electron-builder/out/windowsCodeSign'>;

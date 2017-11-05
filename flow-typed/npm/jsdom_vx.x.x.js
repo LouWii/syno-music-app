@@ -1,4 +1,4 @@
-// flow-typed signature: 9ef277279ac3a485837ed4d6ef10a963
+// flow-typed signature: 004cc0bd3b7d846ee92bf382c30c0b16
 // flow-typed version: <<STUB>>/jsdom_v^11.0.0/flow_v0.48.0
 
 /**
@@ -74,11 +74,11 @@ declare module 'jsdom/lib/jsdom/living/attributes/Attr-impl' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/domparsing/DOMParser-impl' {
+declare module 'jsdom/lib/jsdom/living/dom-token-list' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/events/CompositionEvent-impl' {
+declare module 'jsdom/lib/jsdom/living/domparsing/DOMParser-impl' {
   declare module.exports: any;
 }
 
@@ -134,10 +134,6 @@ declare module 'jsdom/lib/jsdom/living/events/UIEvent-impl' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/events/WheelEvent-impl' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/file-api/Blob-impl' {
   declare module.exports: any;
 }
@@ -190,14 +186,6 @@ declare module 'jsdom/lib/jsdom/living/generated/Comment' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/generated/CompositionEvent' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/CompositionEventInit' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/generated/CustomEvent' {
   declare module.exports: any;
 }
@@ -223,14 +211,6 @@ declare module 'jsdom/lib/jsdom/living/generated/DOMImplementation' {
 }
 
 declare module 'jsdom/lib/jsdom/living/generated/DOMParser' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/DOMStringMap' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/DOMTokenList' {
   declare module.exports: any;
 }
 
@@ -271,10 +251,6 @@ declare module 'jsdom/lib/jsdom/living/generated/EventModifierInit' {
 }
 
 declare module 'jsdom/lib/jsdom/living/generated/EventTarget' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/External' {
   declare module.exports: any;
 }
 
@@ -358,19 +334,11 @@ declare module 'jsdom/lib/jsdom/living/generated/HTMLCanvasElement' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/generated/HTMLCollection' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/generated/HTMLDataElement' {
   declare module.exports: any;
 }
 
 declare module 'jsdom/lib/jsdom/living/generated/HTMLDataListElement' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/HTMLDetailsElement' {
   declare module.exports: any;
 }
 
@@ -470,10 +438,6 @@ declare module 'jsdom/lib/jsdom/living/generated/HTMLMapElement' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/generated/HTMLMarqueeElement' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/generated/HTMLMediaElement' {
   declare module.exports: any;
 }
@@ -510,10 +474,6 @@ declare module 'jsdom/lib/jsdom/living/generated/HTMLOptionElement' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/generated/HTMLOptionsCollection' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/generated/HTMLOutputElement' {
   declare module.exports: any;
 }
@@ -523,10 +483,6 @@ declare module 'jsdom/lib/jsdom/living/generated/HTMLParagraphElement' {
 }
 
 declare module 'jsdom/lib/jsdom/living/generated/HTMLParamElement' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/HTMLPictureElement' {
   declare module.exports: any;
 }
 
@@ -574,7 +530,15 @@ declare module 'jsdom/lib/jsdom/living/generated/HTMLTableColElement' {
   declare module.exports: any;
 }
 
+declare module 'jsdom/lib/jsdom/living/generated/HTMLTableDataCellElement' {
+  declare module.exports: any;
+}
+
 declare module 'jsdom/lib/jsdom/living/generated/HTMLTableElement' {
+  declare module.exports: any;
+}
+
+declare module 'jsdom/lib/jsdom/living/generated/HTMLTableHeaderCellElement' {
   declare module.exports: any;
 }
 
@@ -682,14 +646,6 @@ declare module 'jsdom/lib/jsdom/living/generated/Node' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/generated/NodeIterator' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/NodeList' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/generated/NonDocumentTypeChildNode' {
   declare module.exports: any;
 }
@@ -726,19 +682,7 @@ declare module 'jsdom/lib/jsdom/living/generated/ScrollIntoViewOptions' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/generated/ScrollLogicalPosition' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/generated/ScrollOptions' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/ScrollRestoration' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/SupportedType' {
   declare module.exports: any;
 }
 
@@ -766,31 +710,11 @@ declare module 'jsdom/lib/jsdom/living/generated/utils' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/generated/VisibilityState' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/WheelEvent' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/WheelEventInit' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/generated/WindowEventHandlers' {
   declare module.exports: any;
 }
 
 declare module 'jsdom/lib/jsdom/living/generated/XMLDocument' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/XMLHttpRequestEventTarget' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/generated/XMLHttpRequestUpload' {
   declare module.exports: any;
 }
 
@@ -814,7 +738,7 @@ declare module 'jsdom/lib/jsdom/living/helpers/internal-constants' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/helpers/ordered-set' {
+declare module 'jsdom/lib/jsdom/living/helpers/ordered-set-parser' {
   declare module.exports: any;
 }
 
@@ -834,15 +758,15 @@ declare module 'jsdom/lib/jsdom/living/helpers/stylesheets' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/helpers/text' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/helpers/traversal' {
   declare module.exports: any;
 }
 
 declare module 'jsdom/lib/jsdom/living/helpers/validate-names' {
+  declare module.exports: any;
+}
+
+declare module 'jsdom/lib/jsdom/living/html-collection' {
   declare module.exports: any;
 }
 
@@ -890,6 +814,14 @@ declare module 'jsdom/lib/jsdom/living/node-filter' {
   declare module.exports: any;
 }
 
+declare module 'jsdom/lib/jsdom/living/node-iterator' {
+  declare module.exports: any;
+}
+
+declare module 'jsdom/lib/jsdom/living/node-list' {
+  declare module.exports: any;
+}
+
 declare module 'jsdom/lib/jsdom/living/node-type' {
   declare module.exports: any;
 }
@@ -927,14 +859,6 @@ declare module 'jsdom/lib/jsdom/living/nodes/DocumentType-impl' {
 }
 
 declare module 'jsdom/lib/jsdom/living/nodes/DOMImplementation-impl' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/nodes/DOMStringMap-impl' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/nodes/DOMTokenList-impl' {
   declare module.exports: any;
 }
 
@@ -990,19 +914,11 @@ declare module 'jsdom/lib/jsdom/living/nodes/HTMLCanvasElement-impl' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/nodes/HTMLCollection-impl' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLDataElement-impl' {
   declare module.exports: any;
 }
 
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLDataListElement-impl' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/nodes/HTMLDetailsElement-impl' {
   declare module.exports: any;
 }
 
@@ -1102,10 +1018,6 @@ declare module 'jsdom/lib/jsdom/living/nodes/HTMLMapElement-impl' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/nodes/HTMLMarqueeElement-impl' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLMediaElement-impl' {
   declare module.exports: any;
 }
@@ -1142,10 +1054,6 @@ declare module 'jsdom/lib/jsdom/living/nodes/HTMLOptionElement-impl' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/nodes/HTMLOptionsCollection-impl' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLOutputElement-impl' {
   declare module.exports: any;
 }
@@ -1155,10 +1063,6 @@ declare module 'jsdom/lib/jsdom/living/nodes/HTMLParagraphElement-impl' {
 }
 
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLParamElement-impl' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/nodes/HTMLPictureElement-impl' {
   declare module.exports: any;
 }
 
@@ -1206,7 +1110,15 @@ declare module 'jsdom/lib/jsdom/living/nodes/HTMLTableColElement-impl' {
   declare module.exports: any;
 }
 
+declare module 'jsdom/lib/jsdom/living/nodes/HTMLTableDataCellElement-impl' {
+  declare module.exports: any;
+}
+
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLTableElement-impl' {
+  declare module.exports: any;
+}
+
+declare module 'jsdom/lib/jsdom/living/nodes/HTMLTableHeaderCellElement-impl' {
   declare module.exports: any;
 }
 
@@ -1258,10 +1170,6 @@ declare module 'jsdom/lib/jsdom/living/nodes/Node-impl' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/nodes/NodeList-impl' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/nodes/NonDocumentTypeChildNode-impl' {
   declare module.exports: any;
 }
@@ -1298,19 +1206,7 @@ declare module 'jsdom/lib/jsdom/living/register-elements' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/traversal/helpers' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/traversal/NodeIterator-impl' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/traversal/TreeWalker-impl' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/window/External-impl' {
   declare module.exports: any;
 }
 
@@ -1326,10 +1222,6 @@ declare module 'jsdom/lib/jsdom/living/window/navigation' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/window/SessionHistory' {
-  declare module.exports: any;
-}
-
 declare module 'jsdom/lib/jsdom/living/xhr-sync-worker' {
   declare module.exports: any;
 }
@@ -1342,15 +1234,15 @@ declare module 'jsdom/lib/jsdom/living/xhr/FormData-impl' {
   declare module.exports: any;
 }
 
-declare module 'jsdom/lib/jsdom/living/xhr/XMLHttpRequestEventTarget-impl' {
-  declare module.exports: any;
-}
-
-declare module 'jsdom/lib/jsdom/living/xhr/XMLHttpRequestUpload-impl' {
+declare module 'jsdom/lib/jsdom/living/xmlhttprequest-event-target' {
   declare module.exports: any;
 }
 
 declare module 'jsdom/lib/jsdom/living/xmlhttprequest-symbols' {
+  declare module.exports: any;
+}
+
+declare module 'jsdom/lib/jsdom/living/xmlhttprequest-upload' {
   declare module.exports: any;
 }
 
@@ -1371,6 +1263,10 @@ declare module 'jsdom/lib/jsdom/virtual-console' {
 }
 
 declare module 'jsdom/lib/jsdom/vm-shim' {
+  declare module.exports: any;
+}
+
+declare module 'jsdom/lib/jsdom/web-idl/DOMException' {
   declare module.exports: any;
 }
 
@@ -1418,11 +1314,11 @@ declare module 'jsdom/lib/jsdom/living/attributes.js' {
 declare module 'jsdom/lib/jsdom/living/attributes/Attr-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/attributes/Attr-impl'>;
 }
+declare module 'jsdom/lib/jsdom/living/dom-token-list.js' {
+  declare module.exports: $Exports<'jsdom/lib/jsdom/living/dom-token-list'>;
+}
 declare module 'jsdom/lib/jsdom/living/domparsing/DOMParser-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/domparsing/DOMParser-impl'>;
-}
-declare module 'jsdom/lib/jsdom/living/events/CompositionEvent-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/events/CompositionEvent-impl'>;
 }
 declare module 'jsdom/lib/jsdom/living/events/CustomEvent-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/events/CustomEvent-impl'>;
@@ -1463,9 +1359,6 @@ declare module 'jsdom/lib/jsdom/living/events/TouchEvent-impl.js' {
 declare module 'jsdom/lib/jsdom/living/events/UIEvent-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/events/UIEvent-impl'>;
 }
-declare module 'jsdom/lib/jsdom/living/events/WheelEvent-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/events/WheelEvent-impl'>;
-}
 declare module 'jsdom/lib/jsdom/living/file-api/Blob-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/file-api/Blob-impl'>;
 }
@@ -1505,12 +1398,6 @@ declare module 'jsdom/lib/jsdom/living/generated/ChildNode.js' {
 declare module 'jsdom/lib/jsdom/living/generated/Comment.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/Comment'>;
 }
-declare module 'jsdom/lib/jsdom/living/generated/CompositionEvent.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/CompositionEvent'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/CompositionEventInit.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/CompositionEventInit'>;
-}
 declare module 'jsdom/lib/jsdom/living/generated/CustomEvent.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/CustomEvent'>;
 }
@@ -1531,12 +1418,6 @@ declare module 'jsdom/lib/jsdom/living/generated/DOMImplementation.js' {
 }
 declare module 'jsdom/lib/jsdom/living/generated/DOMParser.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/DOMParser'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/DOMStringMap.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/DOMStringMap'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/DOMTokenList.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/DOMTokenList'>;
 }
 declare module 'jsdom/lib/jsdom/living/generated/Element.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/Element'>;
@@ -1567,9 +1448,6 @@ declare module 'jsdom/lib/jsdom/living/generated/EventModifierInit.js' {
 }
 declare module 'jsdom/lib/jsdom/living/generated/EventTarget.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/EventTarget'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/External.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/External'>;
 }
 declare module 'jsdom/lib/jsdom/living/generated/File.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/File'>;
@@ -1631,17 +1509,11 @@ declare module 'jsdom/lib/jsdom/living/generated/HTMLButtonElement.js' {
 declare module 'jsdom/lib/jsdom/living/generated/HTMLCanvasElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLCanvasElement'>;
 }
-declare module 'jsdom/lib/jsdom/living/generated/HTMLCollection.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLCollection'>;
-}
 declare module 'jsdom/lib/jsdom/living/generated/HTMLDataElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLDataElement'>;
 }
 declare module 'jsdom/lib/jsdom/living/generated/HTMLDataListElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLDataListElement'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/HTMLDetailsElement.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLDetailsElement'>;
 }
 declare module 'jsdom/lib/jsdom/living/generated/HTMLDialogElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLDialogElement'>;
@@ -1715,9 +1587,6 @@ declare module 'jsdom/lib/jsdom/living/generated/HTMLLinkElement.js' {
 declare module 'jsdom/lib/jsdom/living/generated/HTMLMapElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLMapElement'>;
 }
-declare module 'jsdom/lib/jsdom/living/generated/HTMLMarqueeElement.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLMarqueeElement'>;
-}
 declare module 'jsdom/lib/jsdom/living/generated/HTMLMediaElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLMediaElement'>;
 }
@@ -1745,9 +1614,6 @@ declare module 'jsdom/lib/jsdom/living/generated/HTMLOptGroupElement.js' {
 declare module 'jsdom/lib/jsdom/living/generated/HTMLOptionElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLOptionElement'>;
 }
-declare module 'jsdom/lib/jsdom/living/generated/HTMLOptionsCollection.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLOptionsCollection'>;
-}
 declare module 'jsdom/lib/jsdom/living/generated/HTMLOutputElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLOutputElement'>;
 }
@@ -1756,9 +1622,6 @@ declare module 'jsdom/lib/jsdom/living/generated/HTMLParagraphElement.js' {
 }
 declare module 'jsdom/lib/jsdom/living/generated/HTMLParamElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLParamElement'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/HTMLPictureElement.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLPictureElement'>;
 }
 declare module 'jsdom/lib/jsdom/living/generated/HTMLPreElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLPreElement'>;
@@ -1793,8 +1656,14 @@ declare module 'jsdom/lib/jsdom/living/generated/HTMLTableCellElement.js' {
 declare module 'jsdom/lib/jsdom/living/generated/HTMLTableColElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLTableColElement'>;
 }
+declare module 'jsdom/lib/jsdom/living/generated/HTMLTableDataCellElement.js' {
+  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLTableDataCellElement'>;
+}
 declare module 'jsdom/lib/jsdom/living/generated/HTMLTableElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLTableElement'>;
+}
+declare module 'jsdom/lib/jsdom/living/generated/HTMLTableHeaderCellElement.js' {
+  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLTableHeaderCellElement'>;
 }
 declare module 'jsdom/lib/jsdom/living/generated/HTMLTableRowElement.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/HTMLTableRowElement'>;
@@ -1874,12 +1743,6 @@ declare module 'jsdom/lib/jsdom/living/generated/NavigatorPlugins.js' {
 declare module 'jsdom/lib/jsdom/living/generated/Node.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/Node'>;
 }
-declare module 'jsdom/lib/jsdom/living/generated/NodeIterator.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/NodeIterator'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/NodeList.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/NodeList'>;
-}
 declare module 'jsdom/lib/jsdom/living/generated/NonDocumentTypeChildNode.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/NonDocumentTypeChildNode'>;
 }
@@ -1907,17 +1770,8 @@ declare module 'jsdom/lib/jsdom/living/generated/ProgressEventInit.js' {
 declare module 'jsdom/lib/jsdom/living/generated/ScrollIntoViewOptions.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/ScrollIntoViewOptions'>;
 }
-declare module 'jsdom/lib/jsdom/living/generated/ScrollLogicalPosition.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/ScrollLogicalPosition'>;
-}
 declare module 'jsdom/lib/jsdom/living/generated/ScrollOptions.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/ScrollOptions'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/ScrollRestoration.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/ScrollRestoration'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/SupportedType.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/SupportedType'>;
 }
 declare module 'jsdom/lib/jsdom/living/generated/Text.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/Text'>;
@@ -1937,26 +1791,11 @@ declare module 'jsdom/lib/jsdom/living/generated/UIEventInit.js' {
 declare module 'jsdom/lib/jsdom/living/generated/utils.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/utils'>;
 }
-declare module 'jsdom/lib/jsdom/living/generated/VisibilityState.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/VisibilityState'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/WheelEvent.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/WheelEvent'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/WheelEventInit.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/WheelEventInit'>;
-}
 declare module 'jsdom/lib/jsdom/living/generated/WindowEventHandlers.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/WindowEventHandlers'>;
 }
 declare module 'jsdom/lib/jsdom/living/generated/XMLDocument.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/XMLDocument'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/XMLHttpRequestEventTarget.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/XMLHttpRequestEventTarget'>;
-}
-declare module 'jsdom/lib/jsdom/living/generated/XMLHttpRequestUpload.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/generated/XMLHttpRequestUpload'>;
 }
 declare module 'jsdom/lib/jsdom/living/helpers/create-event-accessor.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/helpers/create-event-accessor'>;
@@ -1973,8 +1812,8 @@ declare module 'jsdom/lib/jsdom/living/helpers/form-controls.js' {
 declare module 'jsdom/lib/jsdom/living/helpers/internal-constants.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/helpers/internal-constants'>;
 }
-declare module 'jsdom/lib/jsdom/living/helpers/ordered-set.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/helpers/ordered-set'>;
+declare module 'jsdom/lib/jsdom/living/helpers/ordered-set-parser.js' {
+  declare module.exports: $Exports<'jsdom/lib/jsdom/living/helpers/ordered-set-parser'>;
 }
 declare module 'jsdom/lib/jsdom/living/helpers/runtime-script-errors.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/helpers/runtime-script-errors'>;
@@ -1988,14 +1827,14 @@ declare module 'jsdom/lib/jsdom/living/helpers/strings.js' {
 declare module 'jsdom/lib/jsdom/living/helpers/stylesheets.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/helpers/stylesheets'>;
 }
-declare module 'jsdom/lib/jsdom/living/helpers/text.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/helpers/text'>;
-}
 declare module 'jsdom/lib/jsdom/living/helpers/traversal.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/helpers/traversal'>;
 }
 declare module 'jsdom/lib/jsdom/living/helpers/validate-names.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/helpers/validate-names'>;
+}
+declare module 'jsdom/lib/jsdom/living/html-collection.js' {
+  declare module.exports: $Exports<'jsdom/lib/jsdom/living/html-collection'>;
 }
 declare module 'jsdom/lib/jsdom/living/index.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/index'>;
@@ -2030,6 +1869,12 @@ declare module 'jsdom/lib/jsdom/living/node-document-position.js' {
 declare module 'jsdom/lib/jsdom/living/node-filter.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/node-filter'>;
 }
+declare module 'jsdom/lib/jsdom/living/node-iterator.js' {
+  declare module.exports: $Exports<'jsdom/lib/jsdom/living/node-iterator'>;
+}
+declare module 'jsdom/lib/jsdom/living/node-list.js' {
+  declare module.exports: $Exports<'jsdom/lib/jsdom/living/node-list'>;
+}
 declare module 'jsdom/lib/jsdom/living/node-type.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/node-type'>;
 }
@@ -2059,12 +1904,6 @@ declare module 'jsdom/lib/jsdom/living/nodes/DocumentType-impl.js' {
 }
 declare module 'jsdom/lib/jsdom/living/nodes/DOMImplementation-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/DOMImplementation-impl'>;
-}
-declare module 'jsdom/lib/jsdom/living/nodes/DOMStringMap-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/DOMStringMap-impl'>;
-}
-declare module 'jsdom/lib/jsdom/living/nodes/DOMTokenList-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/DOMTokenList-impl'>;
 }
 declare module 'jsdom/lib/jsdom/living/nodes/Element-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/Element-impl'>;
@@ -2105,17 +1944,11 @@ declare module 'jsdom/lib/jsdom/living/nodes/HTMLButtonElement-impl.js' {
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLCanvasElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLCanvasElement-impl'>;
 }
-declare module 'jsdom/lib/jsdom/living/nodes/HTMLCollection-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLCollection-impl'>;
-}
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLDataElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLDataElement-impl'>;
 }
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLDataListElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLDataListElement-impl'>;
-}
-declare module 'jsdom/lib/jsdom/living/nodes/HTMLDetailsElement-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLDetailsElement-impl'>;
 }
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLDialogElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLDialogElement-impl'>;
@@ -2189,9 +2022,6 @@ declare module 'jsdom/lib/jsdom/living/nodes/HTMLLinkElement-impl.js' {
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLMapElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLMapElement-impl'>;
 }
-declare module 'jsdom/lib/jsdom/living/nodes/HTMLMarqueeElement-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLMarqueeElement-impl'>;
-}
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLMediaElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLMediaElement-impl'>;
 }
@@ -2219,9 +2049,6 @@ declare module 'jsdom/lib/jsdom/living/nodes/HTMLOptGroupElement-impl.js' {
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLOptionElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLOptionElement-impl'>;
 }
-declare module 'jsdom/lib/jsdom/living/nodes/HTMLOptionsCollection-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLOptionsCollection-impl'>;
-}
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLOutputElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLOutputElement-impl'>;
 }
@@ -2230,9 +2057,6 @@ declare module 'jsdom/lib/jsdom/living/nodes/HTMLParagraphElement-impl.js' {
 }
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLParamElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLParamElement-impl'>;
-}
-declare module 'jsdom/lib/jsdom/living/nodes/HTMLPictureElement-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLPictureElement-impl'>;
 }
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLPreElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLPreElement-impl'>;
@@ -2267,8 +2091,14 @@ declare module 'jsdom/lib/jsdom/living/nodes/HTMLTableCellElement-impl.js' {
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLTableColElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLTableColElement-impl'>;
 }
+declare module 'jsdom/lib/jsdom/living/nodes/HTMLTableDataCellElement-impl.js' {
+  declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLTableDataCellElement-impl'>;
+}
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLTableElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLTableElement-impl'>;
+}
+declare module 'jsdom/lib/jsdom/living/nodes/HTMLTableHeaderCellElement-impl.js' {
+  declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLTableHeaderCellElement-impl'>;
 }
 declare module 'jsdom/lib/jsdom/living/nodes/HTMLTableRowElement-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/HTMLTableRowElement-impl'>;
@@ -2306,9 +2136,6 @@ declare module 'jsdom/lib/jsdom/living/nodes/LinkStyle-impl.js' {
 declare module 'jsdom/lib/jsdom/living/nodes/Node-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/Node-impl'>;
 }
-declare module 'jsdom/lib/jsdom/living/nodes/NodeList-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/NodeList-impl'>;
-}
 declare module 'jsdom/lib/jsdom/living/nodes/NonDocumentTypeChildNode-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/nodes/NonDocumentTypeChildNode-impl'>;
 }
@@ -2336,17 +2163,8 @@ declare module 'jsdom/lib/jsdom/living/post-message.js' {
 declare module 'jsdom/lib/jsdom/living/register-elements.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/register-elements'>;
 }
-declare module 'jsdom/lib/jsdom/living/traversal/helpers.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/traversal/helpers'>;
-}
-declare module 'jsdom/lib/jsdom/living/traversal/NodeIterator-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/traversal/NodeIterator-impl'>;
-}
 declare module 'jsdom/lib/jsdom/living/traversal/TreeWalker-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/traversal/TreeWalker-impl'>;
-}
-declare module 'jsdom/lib/jsdom/living/window/External-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/window/External-impl'>;
 }
 declare module 'jsdom/lib/jsdom/living/window/History-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/window/History-impl'>;
@@ -2357,9 +2175,6 @@ declare module 'jsdom/lib/jsdom/living/window/Location-impl.js' {
 declare module 'jsdom/lib/jsdom/living/window/navigation.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/window/navigation'>;
 }
-declare module 'jsdom/lib/jsdom/living/window/SessionHistory.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/window/SessionHistory'>;
-}
 declare module 'jsdom/lib/jsdom/living/xhr-sync-worker.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/xhr-sync-worker'>;
 }
@@ -2369,14 +2184,14 @@ declare module 'jsdom/lib/jsdom/living/xhr-utils.js' {
 declare module 'jsdom/lib/jsdom/living/xhr/FormData-impl.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/xhr/FormData-impl'>;
 }
-declare module 'jsdom/lib/jsdom/living/xhr/XMLHttpRequestEventTarget-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/xhr/XMLHttpRequestEventTarget-impl'>;
-}
-declare module 'jsdom/lib/jsdom/living/xhr/XMLHttpRequestUpload-impl.js' {
-  declare module.exports: $Exports<'jsdom/lib/jsdom/living/xhr/XMLHttpRequestUpload-impl'>;
+declare module 'jsdom/lib/jsdom/living/xmlhttprequest-event-target.js' {
+  declare module.exports: $Exports<'jsdom/lib/jsdom/living/xmlhttprequest-event-target'>;
 }
 declare module 'jsdom/lib/jsdom/living/xmlhttprequest-symbols.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/xmlhttprequest-symbols'>;
+}
+declare module 'jsdom/lib/jsdom/living/xmlhttprequest-upload.js' {
+  declare module.exports: $Exports<'jsdom/lib/jsdom/living/xmlhttprequest-upload'>;
 }
 declare module 'jsdom/lib/jsdom/living/xmlhttprequest.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/living/xmlhttprequest'>;
@@ -2392,6 +2207,9 @@ declare module 'jsdom/lib/jsdom/virtual-console.js' {
 }
 declare module 'jsdom/lib/jsdom/vm-shim.js' {
   declare module.exports: $Exports<'jsdom/lib/jsdom/vm-shim'>;
+}
+declare module 'jsdom/lib/jsdom/web-idl/DOMException.js' {
+  declare module.exports: $Exports<'jsdom/lib/jsdom/web-idl/DOMException'>;
 }
 declare module 'jsdom/lib/old-api.js' {
   declare module.exports: $Exports<'jsdom/lib/old-api'>;

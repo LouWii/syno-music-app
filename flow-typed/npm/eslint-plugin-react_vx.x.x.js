@@ -1,4 +1,4 @@
-// flow-typed signature: 9a5c9f8bb2d8a03ec541aa4e223eaf16
+// flow-typed signature: 95b46e4acd30c791503f59c1beb916e2
 // flow-typed version: <<STUB>>/eslint-plugin-react_v^7.1.0/flow_v0.48.0
 
 /**
@@ -22,10 +22,6 @@ declare module 'eslint-plugin-react' {
  * require those files directly. Feel free to delete any files that aren't
  * needed.
  */
-declare module 'eslint-plugin-react/lib/rules/boolean-prop-naming' {
-  declare module.exports: any;
-}
-
 declare module 'eslint-plugin-react/lib/rules/default-props-match-prop-types' {
   declare module.exports: any;
 }
@@ -59,10 +55,6 @@ declare module 'eslint-plugin-react/lib/rules/jsx-closing-bracket-location' {
 }
 
 declare module 'eslint-plugin-react/lib/rules/jsx-closing-tag-location' {
-  declare module.exports: any;
-}
-
-declare module 'eslint-plugin-react/lib/rules/jsx-curly-brace-presence' {
   declare module.exports: any;
 }
 
@@ -214,10 +206,6 @@ declare module 'eslint-plugin-react/lib/rules/no-string-refs' {
   declare module.exports: any;
 }
 
-declare module 'eslint-plugin-react/lib/rules/no-typos' {
-  declare module.exports: any;
-}
-
 declare module 'eslint-plugin-react/lib/rules/no-unescaped-entities' {
   declare module.exports: any;
 }
@@ -227,10 +215,6 @@ declare module 'eslint-plugin-react/lib/rules/no-unknown-property' {
 }
 
 declare module 'eslint-plugin-react/lib/rules/no-unused-prop-types' {
-  declare module.exports: any;
-}
-
-declare module 'eslint-plugin-react/lib/rules/no-unused-state' {
   declare module.exports: any;
 }
 
@@ -321,9 +305,6 @@ declare module 'eslint-plugin-react/index' {
 declare module 'eslint-plugin-react/index.js' {
   declare module.exports: $Exports<'eslint-plugin-react'>;
 }
-declare module 'eslint-plugin-react/lib/rules/boolean-prop-naming.js' {
-  declare module.exports: $Exports<'eslint-plugin-react/lib/rules/boolean-prop-naming'>;
-}
 declare module 'eslint-plugin-react/lib/rules/default-props-match-prop-types.js' {
   declare module.exports: $Exports<'eslint-plugin-react/lib/rules/default-props-match-prop-types'>;
 }
@@ -350,9 +331,6 @@ declare module 'eslint-plugin-react/lib/rules/jsx-closing-bracket-location.js' {
 }
 declare module 'eslint-plugin-react/lib/rules/jsx-closing-tag-location.js' {
   declare module.exports: $Exports<'eslint-plugin-react/lib/rules/jsx-closing-tag-location'>;
-}
-declare module 'eslint-plugin-react/lib/rules/jsx-curly-brace-presence.js' {
-  declare module.exports: $Exports<'eslint-plugin-react/lib/rules/jsx-curly-brace-presence'>;
 }
 declare module 'eslint-plugin-react/lib/rules/jsx-curly-spacing.js' {
   declare module.exports: $Exports<'eslint-plugin-react/lib/rules/jsx-curly-spacing'>;
@@ -465,9 +443,6 @@ declare module 'eslint-plugin-react/lib/rules/no-set-state.js' {
 declare module 'eslint-plugin-react/lib/rules/no-string-refs.js' {
   declare module.exports: $Exports<'eslint-plugin-react/lib/rules/no-string-refs'>;
 }
-declare module 'eslint-plugin-react/lib/rules/no-typos.js' {
-  declare module.exports: $Exports<'eslint-plugin-react/lib/rules/no-typos'>;
-}
 declare module 'eslint-plugin-react/lib/rules/no-unescaped-entities.js' {
   declare module.exports: $Exports<'eslint-plugin-react/lib/rules/no-unescaped-entities'>;
 }
@@ -476,9 +451,6 @@ declare module 'eslint-plugin-react/lib/rules/no-unknown-property.js' {
 }
 declare module 'eslint-plugin-react/lib/rules/no-unused-prop-types.js' {
   declare module.exports: $Exports<'eslint-plugin-react/lib/rules/no-unused-prop-types'>;
-}
-declare module 'eslint-plugin-react/lib/rules/no-unused-state.js' {
-  declare module.exports: $Exports<'eslint-plugin-react/lib/rules/no-unused-state'>;
 }
 declare module 'eslint-plugin-react/lib/rules/no-will-update-set-state.js' {
   declare module.exports: $Exports<'eslint-plugin-react/lib/rules/no-will-update-set-state'>;
