@@ -52,31 +52,3 @@
         animation-delay: 0.5s;
     }
 }
-
-@keyframes loading-status-anim {
-    0%,
-    100% {
-        transform: scaleY(1);
-        /* background: #03A9F4; */
-    }
-    16.67% {
-        transform: scaleY(2.5);
-        /* background: #FF5722; */
-    }
-    33.33% {
-        transform: scaleY(1);
-        /* background: #FF5252; */
-    }
-    50% {
-        transform: scaleY(2.5);
-        /* background: #E91E63; */
-    }
-    66.67% {
-        transform: scaleY(1);
-        /* background: #9C27B0; */
-    }
-    83.34% {
-        transform: scaleY(2.5);
-        /* background: #673AB7; */
-    }
-}
