@@ -148,6 +148,10 @@
             &:active {
                 transform: scale(0.98);
             }
+
+            .sub-content {
+                display: none;
+            }
         }
     }
 }
