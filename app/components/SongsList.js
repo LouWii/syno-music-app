@@ -17,12 +17,12 @@ export default class SongsList extends React.Component {
   render() {
     return (
     <div>
-      <table className="songs-list">
-        <tbody>
+      <div className="songs-list-container">
+        <ul className="songs-list">
         {this.props.songs.map(function(element, idx){
           const isCurrentSong = (element.id === this.props.player.currentSongId)
-          return <tr key={idx} className={isCurrentSong?'current-song':''}>
-            <td className="play-cell">
+          return <li key={idx} className={isCurrentSong?'current-song':''}>
+            <div className="play-cell">
               {!isCurrentSong &&
                 <button className="bttn bttn-default btn-sm" type="button" onClick={this.handlePlayClick} data-song-idx={idx}><i className="glyphicon glyphicon-play"></i></button>}
               {isCurrentSong &&
@@ -31,14 +31,14 @@ export default class SongsList extends React.Component {
                   <div className="bar bar-two"></div>
                   <div className="bar bar-three"></div>
                 </div>}
-            </td>
-            <td className="title-cell">{element.title}</td>
-            <td className="duration-cell">{getHumanDuration(element.additional.song_audio.duration)}</td>
-            </tr>
+            </div>
+            <div className="title-cell">{element.title}</div>
+            <div className="duration-cell">{getHumanDuration(element.additional.song_audio.duration)}</div>
+            </li>
         }, this)
         }
-        </tbody>
-      </table>
+        </ul>
+      </div>
     </div>
     )
   }
