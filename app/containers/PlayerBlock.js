@@ -5,7 +5,7 @@ class PlayerBlock extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="player-container">
         {this.props.player.songs && this.props.player.songs.length > 0 &&
           <Player 
             playerPlayPause={this.props.playerPlayPause}
