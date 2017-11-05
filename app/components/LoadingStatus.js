@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/LoadingStatus.global.css'
+import '../styles/LoadingStatus.global.scss'
 
 class LoadingStatus extends React.Component {
   render() {
