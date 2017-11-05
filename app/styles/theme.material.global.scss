@@ -1,0 +1,214 @@
+@import '~sass-material-colors';
+
+// Material colors:
+// red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey
+$material-color: 'teal';
+$material-color-second: 'indigo';
+
+.theme-material {
+
+}
+
+.darwin {
+    .theme-material {
+        .asclient {
+            padding-top: 0;
+        }
+        .artists-list-container {
+            padding-top: 0;
+        }
+    }
+}
+
+.theme-material {
+
+    .list-container {
+        background: #FFF;
+        overflow: hidden;
+
+        header {
+            background: material-color($material-color, '500');
+            box-shadow: 0 6px 6px rgba(0,0,0,0.34);
+
+            &::before {
+                content: '';
+                display: block;
+                height: 23px;
+                background: material-color($material-color, '700');
+            }
+
+            .list-title {
+                padding: 12px 17px;
+                font-weight: 500;
+
+                button {
+                    padding: 0;
+                    height: 32px;
+                    margin-right: 35px;
+                }
+                .glyphicon {
+                    color: #fff;
+                }
+            }
+
+            .list-subtitle {
+                position: absolute;
+                top: -2px;
+                left: 0;
+                right: 0;
+                text-align: right;
+                color: #fff;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .content {
+            overflow-y: auto;
+            height: calc(100% - 79px); // 79px = header height
+        }
+
+        .list-item {
+            padding: 15px 16px;
+            border: none;
+            border-bottom: 1px solid #EBEBEB;
+
+            button {
+                color: #212121;
+                padding: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                .sub-content {
+                    display: block;
+                    margin-top: -3px;
+                    color: #757575;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .albums-list-container {
+        .content {
+            height: calc(100% - 77px);
+        }
+
+        .albums-list {
+            .list-item {
+                padding: 14px 16px;
+            }
+        }
+    }
+
+    .songs-list {
+
+        li {
+            border-bottom: 1px solid #EBEBEB;
+        }
+
+        .play-cell {
+            padding: 7px 0;
+
+            .song-playing-icon {
+                margin-top: 7px;
+
+                .bar {
+                    background: material-color($material-color, '300');
+                }
+            }
+
+            button {
+                color: material-color($material-color, '300');
+            }
+
+            .glyphicon {
+                font-size: 18px;
+            }
+        }
+
+        .title-cell {
+            color: #212121;
+            padding: 14px 5px 14px 27px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        
+        .duration-cell {
+            color: #757575;
+            padding: 14px 10px;
+            font-size: 13px;
+        }
+    }
+
+    .player-container {
+        z-index: 800;
+    }
+
+    .player {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        border: 0;
+        background: material-color($material-color, '700');
+        box-shadow: 0 -3px 3px rgba(0,0,0,0.34);
+
+        .controls {
+            // position: absolute;
+            // top: -27px;
+            // left: 0;
+            // right: 0;
+            order: 4;
+
+            .btn-previous, .btn-next, .btn-play {
+                height: 30px;
+                width: 30px;
+                color: #fff;
+                margin: 0 15px;
+                border-radius: 0;
+                background: none;
+            }
+
+            .btn-play {
+                border: 0;
+                padding: 0;
+
+                &:hover {
+                    border: 0;
+                    box-shadow: none;
+                }
+
+                .glyphicon {
+                    color: #fff;
+                }
+            }
+        }
+
+        .playing-song {
+            color: #fff;
+            order: 1;
+            background: material-color($material-color, '800');
+            margin-top: 0;
+            padding: 6px 15px;
+
+            .song-name {
+                display: block;
+                font-size: 12px;
+                font-weight: 700;
+            }
+
+            .song-artist {
+                display: block;
+                font-size: 11px;
+            }
+        }
+
+        .song-progress {
+            order: 2;
+        }
+    }
+}

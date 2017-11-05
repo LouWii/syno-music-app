@@ -20,6 +20,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "fonts-raleway": "0.0.4",
+    "sass-material-colors": "^0.0.5",
     "source-sans-pro": "^2.0.10"
   }
 }

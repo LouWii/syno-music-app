@@ -5,6 +5,7 @@ import Root from './containers/Root';
 import { configureStore, history } from './store/configureStore';
 import { saveStateToLocalStorage } from './utils/localStorage'
 import './styles/base.global.scss';
+import './styles/theme.material.global.scss'
 
 const store = configureStore();
 
