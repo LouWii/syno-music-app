@@ -2,11 +2,32 @@
 
 // Material colors:
 // red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey
-$material-color: 'teal';
-$material-color-second: 'indigo';
 
-.theme-material {
+$material-color-names: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey');
 
+.material-box-shadow-1 {
+    -webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+    box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2)
+}
+.material-box-shadow-1-half {
+    -webkit-box-shadow:0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2);
+    box-shadow:0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2)
+}
+.material-box-shadow-2 {
+    -webkit-box-shadow:0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
+    box-shadow:0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3)
+}
+.material-box-shadow-3 {
+    -webkit-box-shadow:0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3);
+    box-shadow:0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3)
+}
+.material-box-shadow-4,.modal {
+    -webkit-box-shadow:0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.3);
+    box-shadow:0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.3)
+}
+.material-box-shadow-5 {
+    -webkit-box-shadow:0 16px 24px 2px rgba(0,0,0,0.14),0 6px 30px 5px rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,0,0,0.3);
+    box-shadow:0 16px 24px 2px rgba(0,0,0,0.14),0 6px 30px 5px rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,0,0,0.3)
 }
 
 .darwin {
@@ -20,15 +41,78 @@ $material-color-second: 'indigo';
     }
 }
 
-.theme-material {
+
+@each $material-color in $material-color-names {
+
+.theme-material.#{$material-color} {
+
+    .profiles-list {
+        background: #DFDFDF;
+        padding: 0;
+
+        h2 {
+            @extend .material-box-shadow-3;
+            position: relative;
+            margin: 0;
+            padding: 10px 5px 16px 27px;
+            background: material-color($material-color, '500');
+
+            &::before {
+                content: '';
+                display: block;
+                height: 23px;
+                background: material-color($material-color, '700');
+                margin: -10px -5px 20px -27px;
+            }
+
+            .btn-add {
+                @extend .material-box-shadow-2;
+                position: absolute;
+                z-index: 800;
+                padding: 11px 0 0 0;
+                top: 48px;
+                right: 26px;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                background: material-color($material-color, '900');
+
+                .glyphicon {
+                    font-size: 31px;
+                    color: #fff;
+                    font-family: sans-serif;
+                }
+            }
+        }
+
+        .profiles {
+            padding: 7px;
+        }
+
+        .profile {
+            @extend .material-box-shadow-1;
+            border: 0;
+
+            header {
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+            }
+
+
+            .actions {
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+        }
+    }
 
     .list-container {
         background: #FFF;
         overflow: hidden;
 
         header {
+            @extend .material-box-shadow-3;
             background: material-color($material-color, '500');
-            box-shadow: 0 6px 6px rgba(0,0,0,0.34);
 
             &::before {
                 content: '';
@@ -92,6 +176,11 @@ $material-color-second: 'indigo';
     }
 
     .albums-list-container {
+        header {
+            .list-subtitle {
+                display: none;
+            }
+        }
         .content {
             height: calc(100% - 77px);
         }
@@ -158,11 +247,8 @@ $material-color-second: 'indigo';
         box-shadow: 0 -3px 3px rgba(0,0,0,0.34);
 
         .controls {
-            // position: absolute;
-            // top: -27px;
-            // left: 0;
-            // right: 0;
             order: 4;
+            padding: 6px 0;
 
             .btn-previous, .btn-next, .btn-play {
                 height: 30px;
@@ -171,6 +257,7 @@ $material-color-second: 'indigo';
                 margin: 0 15px;
                 border-radius: 0;
                 background: none;
+                font-size: 16px;
             }
 
             .btn-play {
@@ -192,7 +279,7 @@ $material-color-second: 'indigo';
             color: #fff;
             order: 1;
             background: material-color($material-color, '800');
-            margin-top: 0;
+            margin: 0 0;
             padding: 6px 15px;
 
             .song-name {
@@ -209,6 +296,34 @@ $material-color-second: 'indigo';
 
         .song-progress {
             order: 2;
+            position: relative;
+            height: 14px;
+
+            .song-current-time, .song-total-time {
+                position: absolute;
+                top: -30px;
+                color: rgba(255, 255, 255, .8);
+                font-size: 11px;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .song-current-time {
+                left: 8px;
+            }
+
+            .song-total-time {
+                right: 8px;
+            }
+
+            .song-timebar {
+                .timebar {
+                    span {
+                        background: #fff;
+                    }
+                }
+            }
         }
     }
+}
+
 }
