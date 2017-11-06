@@ -140,11 +140,12 @@ export default class ASClient extends React.Component {
             }
             <ul className="albums-list">
               {artistHasAlbums && this.props.client.albums[this.state.selectedArtistName].map(function(element, idx){
+                const itemSub = this.state.selectedArtistName + ((element.year && element.year !== 0)?' - '+element.year:'')
                 return (
                   <li className="list-item" key={idx}>
                     <button onClick={this.handleAlbumClick} data-idx={idx}>
                       {element.name}
-                      <span className="sub-content">{this.state.selectedArtistName} - {element.year}</span>
+                      <span className="sub-content">{itemSub}</span>
                     </button>
                   </li>
                 )
