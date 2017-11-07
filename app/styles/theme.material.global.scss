@@ -1,4 +1,5 @@
 @import '~sass-material-colors';
+@import '~typeface-roboto/index.css';
 
 // Material colors:
 // red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey
@@ -56,6 +57,7 @@ $material-color-names: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue'
             margin: 0;
             padding: 10px 5px 16px 27px;
             background: material-color($material-color, '500');
+            font-family: 'Roboto', sans-serif;
 
             &::before {
                 content: '';
@@ -106,6 +108,18 @@ $material-color-names: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue'
         }
     }
 
+    .loading-info {
+        p {
+            color: #737373;
+        }
+    }
+
+    .loading-animation {
+        .bar {
+            background: #737373;
+        }
+    }
+
     .list-container {
         background: #FFF;
         overflow: hidden;
@@ -113,8 +127,10 @@ $material-color-names: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue'
         header {
             @extend .material-box-shadow-3;
             background: material-color($material-color, '500');
+            font-family: 'Roboto', sans-serif;
 
             &::before {
+                -webkit-app-region: drag;
                 content: '';
                 display: block;
                 height: 23px;
@@ -154,7 +170,7 @@ $material-color-names: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue'
         }
 
         .list-item {
-            padding: 15px 16px;
+            padding: 12px 16px;
             border: none;
             border-bottom: 1px solid #EBEBEB;
 
@@ -164,12 +180,14 @@ $material-color-names: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue'
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
 
                 .sub-content {
                     display: block;
                     margin-top: -3px;
                     color: #757575;
-                    font-size: 16px;
+                    font-size: 14px;
                 }
             }
         }
@@ -199,7 +217,7 @@ $material-color-names: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue'
         }
 
         .play-cell {
-            padding: 7px 0;
+            padding: 11px 0;
 
             .song-playing-icon {
                 margin-top: 7px;
@@ -220,15 +238,18 @@ $material-color-names: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue'
 
         .title-cell {
             color: #212121;
-            padding: 14px 5px 14px 27px;
+            padding: 17px 5px 17px 27px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            font-family: 'Roboto', sans-serif;
+            font-weight: normal;
+            font-size: 16px;
         }
         
         .duration-cell {
             color: #757575;
-            padding: 14px 10px;
+            padding: 19px 10px;
             font-size: 13px;
         }
     }
@@ -243,7 +264,7 @@ $material-color-names: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue'
         flex-direction: column;
         padding: 0px;
         border: 0;
-        background: material-color($material-color, '700');
+        background: material-color($material-color, '800');
         box-shadow: 0 -3px 3px rgba(0,0,0,0.34);
 
         .controls {
@@ -278,7 +299,7 @@ $material-color-names: ('red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue'
         .playing-song {
             color: #fff;
             order: 1;
-            background: material-color($material-color, '800');
+            background: material-color($material-color, '600');
             margin: 0 0;
             padding: 6px 15px;
 
