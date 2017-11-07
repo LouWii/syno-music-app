@@ -20,8 +20,8 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "fonts-raleway": "0.0.4",
-    "roboto-fontface": "^0.8.0",
     "sass-material-colors": "0.0.5",
-    "source-sans-pro": "^2.0.10"
+    "source-sans-pro": "^2.0.10",
+    "typeface-roboto": "0.0.43"
   }
 }
