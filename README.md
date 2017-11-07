@@ -19,12 +19,12 @@ Play all your tracks stored on your Synology NAS
 * Add new design(s)
 * Setup a proper song progress bar that's clickable
 * Handle keyboard music shortcuts (play, pause, next...)
+* Add navbar icon with main controls (play/pause, previous, next)
 * Handle errors properly
 * Better component splitting
 * Better credentials storage
 * Split actions into separate files
 * Use constants for actions types
-* App icon
 * Tests
 
 # Dev
